@@ -24,7 +24,7 @@ public class AuthorizationPage extends TestBase {
     }
 
     public AuthorizationPage closedYandexAutofillPopup() {
-        executeJavaScript("$('.light-theme').remove()");
+        executeJavaScript("$('.IXjnMx4kI').remove()");
 
         return this;
     }
