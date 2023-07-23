@@ -1,4 +1,4 @@
-package tastycoffee.test;
+package tastycoffee.tests;
 
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.AuthorizationPage;

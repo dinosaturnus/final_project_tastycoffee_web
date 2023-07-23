@@ -1,4 +1,4 @@
-package tastycoffee.test;
+package tastycoffee.tests;
 
 import static tastycoffee.utils.RandomUtils.*;
 

@@ -1,7 +1,7 @@
 package tastycoffee.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import tastycoffee.test.TestBase;
+import tastycoffee.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -24,7 +24,7 @@ public class AuthorizationPage extends TestBase {
     }
 
     public AuthorizationPage closedYandexAutofillPopup() {
-        executeJavaScript("$('#root').remove()");
+        executeJavaScript("$('#iframe').remove()");
 
         return this;
     }

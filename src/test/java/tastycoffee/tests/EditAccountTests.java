@@ -1,9 +1,9 @@
-package tastycoffee.test;
+package tastycoffee.tests;
 
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.EditAccountPage;
 
-import static tastycoffee.test.TestData.*;
+import static tastycoffee.tests.TestData.*;
 
 public class EditAccountTests extends TestBase {
 

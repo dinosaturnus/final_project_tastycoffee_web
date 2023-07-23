@@ -2,7 +2,7 @@ package tastycoffee.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
-import tastycoffee.test.TestBase;
+import tastycoffee.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.*;
