@@ -15,7 +15,7 @@ public class AuthorizationComponent extends TestBase {
 
     public void openPopup() {
         open(" ");
-        executeJavaScript("$('#iframe').remove()");
+        executeJavaScript("$('.light-theme').remove()");
         buttonOpenPopupAuthorization.click();
     }
 

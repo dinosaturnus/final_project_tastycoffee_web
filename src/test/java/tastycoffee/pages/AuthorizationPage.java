@@ -24,7 +24,7 @@ public class AuthorizationPage extends TestBase {
     }
 
     public AuthorizationPage closedYandexAutofillPopup() {
-        executeJavaScript("$('#iframe').remove()");
+        executeJavaScript("$('.light-theme').remove()");
 
         return this;
     }
