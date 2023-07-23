@@ -3,6 +3,7 @@ package tastycoffee.pages.components;
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.tests.TestBase;
 
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -11,11 +12,14 @@ public class AuthorizationComponent extends TestBase {
             emailInput = $("#email"),
             passwordInput = $("#password"),
             submitButton = $("#sign-in"),
-            goOutButton = $(".go-out");
+            goOutButton = $(".go-out"),
+            supportPopup = $("#supportTrigger");
+
 
     public void openPopup() {
         open(" ");
-        executeJavaScript("$('.light-theme').remove()");
+        supportPopup.should(exist);
+        refresh();
         buttonOpenPopupAuthorization.click();
     }
 

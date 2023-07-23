@@ -3,8 +3,7 @@ package tastycoffee.pages;
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.tests.TestBase;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationPage extends TestBase {
@@ -14,7 +13,8 @@ public class AuthorizationPage extends TestBase {
             passwordInput = $("#password"),
             submitButton = $("#sign-in"),
             goOutButton = $(".go-out"),
-            errorAuthorizationText = $(".siteError");
+            errorAuthorizationText = $(".siteError"),
+            supportPopup = $("#supportTrigger");
 
 
     public AuthorizationPage openMainPage() {
@@ -24,8 +24,8 @@ public class AuthorizationPage extends TestBase {
     }
 
     public AuthorizationPage closedYandexAutofillPopup() {
-        executeJavaScript("$('. visible').remove()");
-
+        supportPopup.should(exist);
+        refresh();
         return this;
     }
 
