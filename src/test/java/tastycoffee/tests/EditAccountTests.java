@@ -1,8 +1,13 @@
 package tastycoffee.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.EditAccountPage;
 
+import static io.qameta.allure.Allure.step;
 import static tastycoffee.tests.TestData.*;
 
 public class EditAccountTests extends TestBase {
@@ -12,24 +17,36 @@ public class EditAccountTests extends TestBase {
 
     EditAccountPage editAccountPage = new EditAccountPage();
 
+    @Epic("Редактирование ЛК пользователя")
+    @Story("Позитивный сценарий")
+    @DisplayName("Успешный сценарий редактирования данных пользователя")
+    @Tag("Happy path")
+    @Tag("Smoke")
     @Test
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
-        editAccountPage.authorizationUser(email, password);
+        step("Открытие главной страницы и авторизация", () -> {
+            editAccountPage.authorizationUser(email, password);
+        });
 
-        editAccountPage.openAccountPage();
+        step("Открытие страницы с личной информацией пользователя", () -> {
+            editAccountPage.openAccountPage();
+        });
 
-        editAccountPage.editFullName(fullName)
-                .editPhoneNumber(phoneNumber)
-                .editCompanyName(companyName)
-                .editCompanyAddress(companyAddress)
-                .editCompanyInn(companyInn)
-                .editCompanyKpp(companyKpp);
-        editAccountPage.clickSubmitUpdateButton();
+        step("Редактирование и сохранение данных пользователя", () -> {
+            editAccountPage.editFullName(fullName)
+                    .editPhoneNumber(phoneNumber)
+                    .editCompanyName(companyName)
+                    .editCompanyAddress(companyAddress)
+                    .editCompanyInn(companyInn)
+                    .editCompanyKpp(companyKpp);
+            editAccountPage.clickSubmitUpdateButton();
+        });
 
-        editAccountPage.verifyUpdateResults(fullName, phoneNumber, companyName,
-                companyAddress, companyInn, companyKpp);
-
+        step("Проверка измененных данных пользователя", () -> {
+            editAccountPage.verifyUpdateResults(fullName, phoneNumber, companyName,
+                    companyAddress, companyInn, companyKpp);
+        });
 
 // часть с паролем - отложена
         // $(".input-wrap [type='password']").setValue(passwordNew);

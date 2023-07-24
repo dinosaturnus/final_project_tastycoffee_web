@@ -19,34 +19,34 @@ public class AuthorizationsTests extends TestBase {
 
     @Epic("Авторизация")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешный сценарий авторизации юзера (happy path)")
+    @DisplayName("Успешный сценарий авторизации пользователя")
     @Tag("Happy path")
     @Tag("Smoke")
     @Test
     void positiveAuthorizationTest() {
 
-        step("Открыть главную страницу", () -> {
+        step("Открытие главной страницы", () -> {
             authorizationPage.openMainPage();
         });
 
-        step("Открыть окно авторизации", () -> {
+        step("Открытие поп-апа авторизации", () -> {
             authorizationPage.closedYandexAutofillPopup()
                     .openPopupAuthorization();
         });
 
-        step("Ввести логин", () -> {
+        step("Ввод логина", () -> {
             authorizationPage.setEmail(email);
         });
 
-        step("Ввести пароль", () -> {
+        step("Ввод пароля", () -> {
             authorizationPage.setPassword(password);
         });
 
-        step("Нажать кнопку 'Войти'", () -> {
+        step("Авторизация через нажатие кнопки 'Войти'", () -> {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверить успешность авторизации", () -> {
+        step("Проверка успешности авторизации", () -> {
             authorizationPage.verifyAuthorization();
         });
 
@@ -54,7 +54,7 @@ public class AuthorizationsTests extends TestBase {
 
     @Epic("Авторизация")
     @Story("Негативные сценарии")
-    @DisplayName("Введен неверный пароль")
+    @DisplayName("Ввод неверного пароля при авторизации")
     @Tag("Негативный")
     @Tag("Smoke")
     @Test
@@ -88,7 +88,7 @@ public class AuthorizationsTests extends TestBase {
 
     @Epic("Авторизация")
     @Story("Негативные сценарии")
-    @DisplayName("Введен неверный логин")
+    @DisplayName("Ввод неверного логина при авторизации")
     @Tag("Негативный")
     @Tag("Smoke")
     @Test
