@@ -42,6 +42,7 @@ public class TestBase {
         Selenide.clearBrowserCookies();
     }
 
+    @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
