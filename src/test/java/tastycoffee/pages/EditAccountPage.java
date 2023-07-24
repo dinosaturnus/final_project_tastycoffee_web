@@ -50,7 +50,7 @@ public class EditAccountPage extends TestBase {
         return this;
     }
 
-//    public EditingAccountPage editEmail(String value) {
+//    public EditAccountPage editEmail(String value) {
 //        $(".input-wrap [type='email']").clear();
 //        $(".input-wrap [type='email']").setValue(value);
 //

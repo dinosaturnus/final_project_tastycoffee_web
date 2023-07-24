@@ -12,14 +12,11 @@ import static tastycoffee.tests.TestData.*;
 
 public class EditAccountTests extends TestBase {
 
-    String email = "test12345@test.ru",
-            password = "123456A";
-
     EditAccountPage editAccountPage = new EditAccountPage();
 
     @Epic("Редактирование ЛК пользователя")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешный сценарий редактирования данных пользователя")
+    @DisplayName("Успешный сценарий редактирования данных пользователя (без логина и пароля)")
     @Tag("Happy path")
     @Tag("Smoke")
     @Test
@@ -50,6 +47,7 @@ public class EditAccountTests extends TestBase {
             editAccountPage.verifyUpdateResults(fullName, phoneNumber, companyName,
                     companyAddress, companyInn, companyKpp);
         });
+
 
 // часть с паролем - отложена
         // $(".input-wrap [type='password']").setValue(passwordNew);

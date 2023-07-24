@@ -8,13 +8,11 @@ import org.junit.jupiter.api.Test;
 import tastycoffee.pages.AuthorizationPage;
 
 import static io.qameta.allure.Allure.step;
+import static tastycoffee.tests.TestData.*;
 
 public class AuthorizationsTests extends TestBase {
 
     AuthorizationPage authorizationPage = new AuthorizationPage();
-
-    String email = "test12345@test.ru",
-            password = "123456A";
 
     @Epic("Авторизация")
     @Story("Позитивный сценарий")

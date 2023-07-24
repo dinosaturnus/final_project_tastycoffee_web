@@ -14,6 +14,10 @@ public class RandomUtils {
         return "7 (9" + getRandomInt(11, 99) + ") " + getRandomInt(111, 999) + "-" + getRandomInt(1111, 9999);
     }
 
+//    public static String getRandomEmail() {
+//        return new Faker().internet().emailAddress();
+//    }
+
     public static String getRandomCompanyName() {
         return new Faker().company().name();
     }

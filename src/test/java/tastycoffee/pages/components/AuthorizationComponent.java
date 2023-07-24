@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationComponent extends TestBase {
+
     SelenideElement buttonOpenPopupAuthorization = $("button.enterOpen"),
             emailInput = $("#email"),
             passwordInput = $("#password"),
