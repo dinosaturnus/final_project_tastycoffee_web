@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import tastycoffee.helpers.Attach;
 
 import java.util.Map;
 
@@ -39,6 +40,13 @@ public class TestBase {
     @AfterEach
     void afterEach() {
         Selenide.clearBrowserCookies();
+    }
+
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }
 

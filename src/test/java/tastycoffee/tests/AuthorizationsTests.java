@@ -3,6 +3,8 @@ package tastycoffee.tests;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.AuthorizationPage;
 
+import static io.qameta.allure.Allure.step;
+
 public class AuthorizationsTests extends TestBase {
 
     AuthorizationPage authorizationPage = new AuthorizationPage();
@@ -12,9 +14,11 @@ public class AuthorizationsTests extends TestBase {
 
     @Test
     void positiveAuthorizationTest() {
+        step("Открыть главную страницу", () -> {
+            authorizationPage.openMainPage();
+        });
 
-        authorizationPage.openMainPage()
-                .closedYandexAutofillPopup()
+        authorizationPage.closedYandexAutofillPopup()
                 .openPopupAuthorization()
                 .setEmail(email)
                 .setPassword(password)
