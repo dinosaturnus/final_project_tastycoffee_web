@@ -4,7 +4,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.AuthorizationPage;
 
@@ -25,28 +24,28 @@ public class AuthorizationsTests extends TestBase {
     @Test
     void positiveAuthorizationTest() {
 
-        step("Открытие главной страницы", () -> {
+        step("Открыть главную страницу", () -> {
             authorizationPage.openMainPage();
         });
 
-        step("Открытие поп-апа авторизации", () -> {
+        step("Открыть поп-ап авторизации", () -> {
             authorizationPage.closedYandexAutofillPopup()
                     .openPopupAuthorization();
         });
 
-        step("Ввод логина", () -> {
+        step("Ввеести логин", () -> {
             authorizationPage.setEmail(email);
         });
 
-        step("Ввод пароля", () -> {
+        step("Ввести пароль", () -> {
             authorizationPage.setPassword(password);
         });
 
-        step("Авторизация через нажатие кнопки 'Войти'", () -> {
+        step("Нажать кнопку 'Войти'", () -> {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверка успешности авторизации", () -> {
+        step("Проверить успешность авторизации", () -> {
             authorizationPage.verifyAuthorization();
         });
 

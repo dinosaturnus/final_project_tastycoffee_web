@@ -25,25 +25,28 @@ public class EditAccountTests extends TestBase {
     @Test
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
-        step("Открытие главной страницы и авторизация", () -> {
+        step("Открыть главную страницу и авторизоваться", () -> {
             editAccountPage.authorizationUser(email, password);
         });
 
-        step("Открытие страницы с личной информацией пользователя", () -> {
+        step("Открыть страницу ЛК", () -> {
             editAccountPage.openAccountPage();
         });
 
-        step("Редактирование и сохранение данных пользователя", () -> {
+        step("Редактировать данные пользователя", () -> {
             editAccountPage.editFullName(fullName)
                     .editPhoneNumber(phoneNumber)
                     .editCompanyName(companyName)
                     .editCompanyAddress(companyAddress)
                     .editCompanyInn(companyInn)
                     .editCompanyKpp(companyKpp);
+        });
+
+        step("Сохранить редактирование через кнопку 'Сохранить'", () -> {
             editAccountPage.clickSubmitUpdateButton();
         });
 
-        step("Проверка измененных данных пользователя", () -> {
+        step("Проверить изменения в данных пользователя", () -> {
             editAccountPage.verifyUpdateResults(fullName, phoneNumber, companyName,
                     companyAddress, companyInn, companyKpp);
         });
