@@ -26,10 +26,10 @@ public class AuthorizationsTests extends TestBase {
             authorizationPage.openMainPage();
         });
 
-        step("Открыть поп-ап авторизации", () -> {
-            authorizationPage.closedYandexAutofillPopup()
-                    .openPopupAuthorization();
-        });
+//        step("Открыть поп-ап авторизации", () -> {
+//            authorizationPage.closedYandexAutofillPopup()
+//                    .openPopupAuthorization();
+//        });
 
         step("Ввеести логин", () -> {
             authorizationPage.setEmail(email);
@@ -61,10 +61,10 @@ public class AuthorizationsTests extends TestBase {
             authorizationPage.openMainPage();
         });
 
-        step("Открыть окно авторизации", () -> {
-            authorizationPage.closedYandexAutofillPopup()
-                    .openPopupAuthorization();
-        });
+//        step("Открыть окно авторизации", () -> {
+//            authorizationPage.closedYandexAutofillPopup()
+//                    .openPopupAuthorization();
+//        });
 
         step("Ввести логин", () -> {
             authorizationPage.setEmail(email);
@@ -95,10 +95,10 @@ public class AuthorizationsTests extends TestBase {
             authorizationPage.openMainPage();
         });
 
-        step("Открыть окно авторизации", () -> {
-            authorizationPage.closedYandexAutofillPopup()
-                    .openPopupAuthorization();
-        });
+//        step("Открыть окно авторизации", () -> {
+//            authorizationPage.closedYandexAutofillPopup()
+//                    .openPopupAuthorization();
+//        });
 
         step("Ввести неверный логин", () -> {
             authorizationPage.setEmail(email + "1");

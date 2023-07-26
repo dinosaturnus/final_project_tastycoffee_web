@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.EditAccountPage;
 
+import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.tests.TestData.*;
 
@@ -23,7 +24,7 @@ public class EditAccountTests extends TestBase {
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
         step("Открыть главную страницу и авторизоваться", () -> {
-            editAccountPage.authorizationUser(email, password);
+            editAccountPage.authorizationUser( "hisako.koch@yahoo.com", password);
         });
 
         step("Открыть страницу ЛК", () -> {
@@ -48,6 +49,9 @@ public class EditAccountTests extends TestBase {
                     companyAddress, companyInn, companyKpp);
         });
 
+        step("Открыть главную страницу и авторизоваться", () -> {
+            editAccountPage.authorizationUser(email, password);
+        });
 
 // часть с паролем - отложена
         // $(".input-wrap [type='password']").setValue(passwordNew);

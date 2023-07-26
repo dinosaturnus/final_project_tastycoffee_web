@@ -50,12 +50,12 @@ public class EditAccountPage extends TestBase {
         return this;
     }
 
-//    public EditAccountPage editEmail(String value) {
-//        $(".input-wrap [type='email']").clear();
-//        $(".input-wrap [type='email']").setValue(value);
-//
-//        return this;
-//    }
+    public EditAccountPage editEmail(String value) {
+        $(".input-wrap [type='email']").clear();
+        $(".input-wrap [type='email']").setValue(value);
+
+        return this;
+    }
 
     public EditAccountPage editCompanyName(String value) {
         companyNameInput.clear();
