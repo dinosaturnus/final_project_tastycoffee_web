@@ -2,6 +2,8 @@ package tastycoffee.tests;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +15,18 @@ import static tastycoffee.tests.TestData.*;
 
 public class EditAvatarUser extends TestBase {
 
-    EditAvatarPage editAvatarPage = new EditAvatarPage();
+    static EditAvatarPage editAvatarPage = new EditAvatarPage();
+
+    @BeforeAll
+    static void autho() {
+        step("Открыть страницу авторизации и авторизоваться", () -> {
+            editAvatarPage.authorizationUser(email, password);
+        });
+
+        step("Открыть страницу личного кабинета", () -> {
+            editAvatarPage.openAccountPage();
+        });
+    }
 
     @CsvFileSource(resources = "/avatars_path.csv")
 
@@ -24,13 +37,13 @@ public class EditAvatarUser extends TestBase {
     @Tag("Smoke")
     @ParameterizedTest (name = "Загрузка изображений с разными расширениями при изменении аватара")
     void paramTest(String imagePath) {
-        step("Открыть страницу авторизации и авторизоваться", () -> {
-            editAvatarPage.authorizationUser(email, password);
-        });
-
-        step("Открыть страницу личного кабинета", () -> {
-            editAvatarPage.openAccountPage();
-        });
+//        step("Открыть страницу авторизации и авторизоваться", () -> {
+//            editAvatarPage.authorizationUser(email, password);
+//        });
+//
+//        step("Открыть страницу личного кабинета", () -> {
+//            editAvatarPage.openAccountPage();
+//        });
 
         step("Выбрать и загрузить новый аватар", () -> {
             editAvatarPage.clickEditAvatarButton()

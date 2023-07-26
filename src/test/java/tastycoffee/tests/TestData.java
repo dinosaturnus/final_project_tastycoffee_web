@@ -12,8 +12,6 @@ public class TestData {
             companyAddress = getRandomCompanyAddress(),
             companyInn = getRandomCompanyInn(),
             companyKpp = getRandomCompanyKpp();
-
-
 }
 
 
