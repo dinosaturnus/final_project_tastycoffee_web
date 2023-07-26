@@ -27,7 +27,7 @@ public class EditAccountTests extends TestBase {
             editAccountPage.authorizationUser( email, password);
         });
 
-        step("Открыть страницу ЛК", () -> {
+        step("Открыть страницу личного кабинета", () -> {
             editAccountPage.openAccountPage();
         });
 
