@@ -10,18 +10,18 @@ import static com.codeborne.selenide.Selenide.*;
 public class AuthorizationComponent extends TestBase {
 
     SelenideElement buttonOpenPopupAuthorization = $("button.enterOpen"),
-            emailInput = $("#email"),
-            passwordInput = $("#password"),
-            submitButton = $("#sign-in"),
+            emailInput = $("#login_email"),
+            passwordInput = $("#login_password"),
+            submitButton = $(".ib3 input.blackBtn"),
             goOutButton = $(".go-out"),
             supportPopup = $("#supportTrigger");
 
 
-    public void openPopup() {
-        open(" ");
-        supportPopup.should(exist);
-        refresh();
-        buttonOpenPopupAuthorization.click();
+    public void openAuthorizationPage() {
+        open("/login");
+//        supportPopup.should(exist);
+//        refresh();
+//        buttonOpenPopupAuthorization.click();
     }
 
     public void setEmail(String value) {

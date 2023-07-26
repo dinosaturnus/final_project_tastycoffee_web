@@ -17,7 +17,7 @@ public class AuthorizationPage extends TestBase {
             supportPopup = $("#supportTrigger");
 
 
-    public AuthorizationPage openMainPage() {
+    public AuthorizationPage openAuthorizationPage() {
         open("/login");
 
         return this;

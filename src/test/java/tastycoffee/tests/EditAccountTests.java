@@ -23,8 +23,8 @@ public class EditAccountTests extends TestBase {
     @Test
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
-        step("Открыть главную страницу и авторизоваться", () -> {
-            editAccountPage.authorizationUser( "hisako.koch@yahoo.com", password);
+        step("Открыть страницу авторизации и авторизоваться", () -> {
+            editAccountPage.authorizationUser( email, password);
         });
 
         step("Открыть страницу ЛК", () -> {
@@ -49,9 +49,6 @@ public class EditAccountTests extends TestBase {
                     companyAddress, companyInn, companyKpp);
         });
 
-        step("Открыть главную страницу и авторизоваться", () -> {
-            editAccountPage.authorizationUser(email, password);
-        });
 
 // часть с паролем - отложена
         // $(".input-wrap [type='password']").setValue(passwordNew);

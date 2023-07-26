@@ -21,7 +21,7 @@ public class EditAccountPage extends TestBase {
 
     public EditAccountPage authorizationUser(String valueEmail, String valuePass) {
 
-        authorizationComponent.openPopup();
+        authorizationComponent.openAuthorizationPage();
         authorizationComponent.setEmail(valueEmail);
         authorizationComponent.setPassword(valuePass);
         authorizationComponent.clickSubmitButton();
@@ -46,13 +46,6 @@ public class EditAccountPage extends TestBase {
     public EditAccountPage editPhoneNumber(String value) {
         phoneNumberInput.clear();
         phoneNumberInput.setValue(value);
-
-        return this;
-    }
-
-    public EditAccountPage editEmail(String value) {
-        $(".input-wrap [type='email']").clear();
-        $(".input-wrap [type='email']").setValue(value);
 
         return this;
     }

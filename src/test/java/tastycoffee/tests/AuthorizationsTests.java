@@ -22,8 +22,8 @@ public class AuthorizationsTests extends TestBase {
     @Test
     void positiveAuthorizationTest() {
 
-        step("Открыть главную страницу", () -> {
-            authorizationPage.openMainPage();
+        step("Открыть страницу авторизации", () -> {
+            authorizationPage.openAuthorizationPage();
         });
 
 //        step("Открыть поп-ап авторизации", () -> {
@@ -57,8 +57,8 @@ public class AuthorizationsTests extends TestBase {
     @Test
     void negativeInvalidPasswordAuthorizationTest() {
 
-        step("Открыть главную страницу", () -> {
-            authorizationPage.openMainPage();
+        step("Открыть страницу авторизации", () -> {
+            authorizationPage.openAuthorizationPage();
         });
 
 //        step("Открыть окно авторизации", () -> {
@@ -91,8 +91,8 @@ public class AuthorizationsTests extends TestBase {
     @Test
     void negativeInvalidEmailAuthorizationTest() {
 
-        step("Открыть главную страницу", () -> {
-            authorizationPage.openMainPage();
+        step("Открыть страницу авторизации", () -> {
+            authorizationPage.openAuthorizationPage();
         });
 
 //        step("Открыть окно авторизации", () -> {
