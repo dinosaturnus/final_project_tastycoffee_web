@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.EditAccountPage;
 
-import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.tests.TestData.*;
 
@@ -15,7 +14,7 @@ public class EditAccountTests extends TestBase {
 
     EditAccountPage editAccountPage = new EditAccountPage();
 
-    @Epic("Редактирование ЛК пользователя")
+    @Epic("Редактирование личного кабинета пользователя")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования данных пользователя (без логина и пароля)")
     @Tag("Happy path")

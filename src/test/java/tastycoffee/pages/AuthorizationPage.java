@@ -8,32 +8,17 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationPage extends TestBase {
 
-    SelenideElement buttonOpenPopupAuthorization = $("button.enterOpen"),
-            emailInput = $("#login_email"),
+    SelenideElement emailInput = $("#login_email"),
             passwordInput = $("#login_password"),
             submitButton = $(".ib3 input.blackBtn"),
             goOutButton = $(".go-out"),
-            errorAuthorizationText = $(".ib1 .siteError"),
-            supportPopup = $("#supportTrigger");
-
+            errorAuthorizationText = $(".ib1 .siteError");
 
     public AuthorizationPage openAuthorizationPage() {
         open("/login");
 
         return this;
     }
-
-//    public AuthorizationPage closedYandexAutofillPopup() {
-//        supportPopup.should(exist);
-//        refresh();
-//        return this;
-//    }
-
-//    public AuthorizationPage openPopupAuthorization() {
-//        buttonOpenPopupAuthorization.click();
-//
-//        return this;
-//    }
 
     public AuthorizationPage setEmail(String value) {
         emailInput.setValue(value);

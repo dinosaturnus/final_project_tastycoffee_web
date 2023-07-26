@@ -31,8 +31,4 @@ public class RandomUtils {
         return new Faker().random().hex(9);
     }
 
-    public static String getRandomPicture() {
-        return faker.options().option("cat.gif");
-    }
-
 }

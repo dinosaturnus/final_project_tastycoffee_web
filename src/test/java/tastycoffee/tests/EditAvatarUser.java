@@ -1,36 +1,50 @@
 package tastycoffee.tests;
 
-import com.codeborne.selenide.Condition;
-import org.junit.jupiter.api.Test;
-import tastycoffee.pages.EditAccountPage;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import tastycoffee.pages.EditAvatarPage;
 
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.tests.TestData.email;
-import static tastycoffee.tests.TestData.password;
+import static tastycoffee.tests.TestData.*;
 
 public class EditAvatarUser extends TestBase {
 
-    @Test
-    void positiveEditAvatarUserTest() {
+    EditAvatarPage editAvatarPage = new EditAvatarPage();
 
-        EditAccountPage editAccountPage = new EditAccountPage();
+    @CsvFileSource(resources = "/avatars_path.csv")
 
+    @Epic("Редактирование личного кабинета пользователя")
+    @Story("Позитивный сценарий")
+    @DisplayName("Успешный сценарий редактирования аватара пользователя")
+    @Tag("Happy path")
+    @Tag("Smoke")
+    @ParameterizedTest (name = "Загрузка изображений с разными расширениями при изменении аватара")
+    void paramTest(String imagePath) {
         step("Открыть страницу авторизации и авторизоваться", () -> {
-            editAccountPage.authorizationUser( email, password);
+            editAvatarPage.authorizationUser(email, password);
         });
 
         step("Открыть страницу личного кабинета", () -> {
-            editAccountPage.openAccountPage();
+            editAvatarPage.openAccountPage();
         });
 
-        $(".userAvatar-buttons").$(withText("Поменять фото профиля")).click();
-        $("#upload-profile-file").uploadFromClasspath("images/cat.webp");
-        $("#upload-avatar-result").click();
-        $(".userAvatar-image").shouldBe(visible);
+        step("Выбрать и загрузить новый аватар", () -> {
+            editAvatarPage.clickEditAvatarButton()
+                    .uploadImage(imagePath)
+                    .saveImage();
+        });
+
+        step("Проверить, что аватар загрузился", () -> {
+            editAvatarPage.verifyNewAvatar();
+        });
+
+        step("Удалить загруженный аватар", () -> {
+            editAvatarPage.deleteAvatar();
+        });
 
     }
 }

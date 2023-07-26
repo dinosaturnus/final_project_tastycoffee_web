@@ -33,12 +33,12 @@ public class TestBase {
     }
 
     @BeforeEach
-    void addListener() {
+    void addAllureListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
-    void afterEach() {
+    void clearBrowserCookies() {
         Selenide.clearBrowserCookies();
     }
 
@@ -49,5 +49,6 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
     }
+
 }
 

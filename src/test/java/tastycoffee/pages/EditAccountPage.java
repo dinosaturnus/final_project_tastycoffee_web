@@ -37,42 +37,36 @@ public class EditAccountPage extends TestBase {
     }
 
     public EditAccountPage editFullName(String value) {
-        fullNameInput.clear();
         fullNameInput.setValue(value);
 
         return this;
     }
 
     public EditAccountPage editPhoneNumber(String value) {
-        phoneNumberInput.clear();
         phoneNumberInput.setValue(value);
 
         return this;
     }
 
     public EditAccountPage editCompanyName(String value) {
-        companyNameInput.clear();
         companyNameInput.setValue(value);
 
         return this;
     }
 
     public EditAccountPage editCompanyAddress(String value) {
-        companyAddressInput.clear();
         companyAddressInput.setValue(value);
 
         return this;
     }
 
     public EditAccountPage editCompanyInn(String value) {
-        companyInnInput.clear();
         companyInnInput.setValue(value);
 
         return this;
     }
 
     public EditAccountPage editCompanyKpp(String value) {
-        companyKppInput.clear();
         companyKppInput.setValue(value);
 
         return this;
