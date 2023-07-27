@@ -18,6 +18,8 @@ public class AddItemToTheCartForUnauthorizedTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
+    @Story("Неавторизованный пользователь")
+    @Story("Страница товара")
     @DisplayName("Успешный сценарий добавления товара в корзину со страницы товара под неавторизованным пользователем")
     @Tag("Happy path")
     @Tag("Smoke")
