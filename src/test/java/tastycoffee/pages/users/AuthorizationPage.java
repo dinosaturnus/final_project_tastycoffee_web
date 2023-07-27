@@ -1,4 +1,4 @@
-package tastycoffee.pages;
+package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.tests.TestBase;

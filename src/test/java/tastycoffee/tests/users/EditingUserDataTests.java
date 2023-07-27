@@ -1,20 +1,23 @@
-package tastycoffee.tests;
+package tastycoffee.tests.users;
 
 import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tastycoffee.pages.EditAccountPage;
+import tastycoffee.pages.users.EditingUserDataPage;
+import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.tests.TestData.*;
 
-public class EditAccountTests extends TestBase {
+public class EditingUserDataTests extends TestBase {
 
-    EditAccountPage editAccountPage = new EditAccountPage();
+    EditingUserDataPage editingUserDataPage = new EditingUserDataPage();
 
-    @Epic("Редактирование личного кабинета пользователя")
+    @Epic("Действия с личным кабинетом пользователя")
+    @Feature("Редактирование личной информации")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования данных пользователя (без логина и пароля)")
     @Tag("Happy path")
@@ -23,15 +26,15 @@ public class EditAccountTests extends TestBase {
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
         step("Открыть страницу авторизации и авторизоваться", () -> {
-            editAccountPage.authorizationUser( email, password);
+            editingUserDataPage.authorizationUser( email, password);
         });
 
         step("Открыть страницу личного кабинета", () -> {
-            editAccountPage.openAccountPage();
+            editingUserDataPage.openAccountPage();
         });
 
         step("Редактировать данные пользователя", () -> {
-            editAccountPage.editFullName(fullName)
+            editingUserDataPage.editFullName(fullName)
                     .editPhoneNumber(phoneNumber)
                     .editCompanyName(companyName)
                     .editCompanyAddress(companyAddress)
@@ -40,11 +43,11 @@ public class EditAccountTests extends TestBase {
         });
 
         step("Сохранить редактирование через кнопку 'Сохранить'", () -> {
-            editAccountPage.clickSubmitUpdateButton();
+            editingUserDataPage.clickSubmitUpdateButton();
         });
 
         step("Проверить изменения в данных пользователя", () -> {
-            editAccountPage.verifyUpdateResults(fullName, phoneNumber, companyName,
+            editingUserDataPage.verifyUpdateResults(fullName, phoneNumber, companyName,
                     companyAddress, companyInn, companyKpp);
         });
 

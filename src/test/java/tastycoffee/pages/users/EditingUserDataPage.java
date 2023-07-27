@@ -1,4 +1,4 @@
-package tastycoffee.pages;
+package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
@@ -7,7 +7,7 @@ import tastycoffee.tests.TestBase;
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.*;
 
-public class EditAccountPage extends TestBase {
+public class EditingUserDataPage extends TestBase {
 
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
 
@@ -19,7 +19,7 @@ public class EditAccountPage extends TestBase {
             companyKppInput = $(".input-wrap [name='legal_kpp']"),
             submitUpdateButton = $("#submit-update-account");
 
-    public EditAccountPage authorizationUser(String valueEmail, String valuePass) {
+    public EditingUserDataPage authorizationUser(String valueEmail, String valuePass) {
 
         authorizationComponent.openAuthorizationPage();
         authorizationComponent.setEmail(valueEmail);
@@ -30,55 +30,55 @@ public class EditAccountPage extends TestBase {
         return this;
     }
 
-    public EditAccountPage openAccountPage() {
+    public EditingUserDataPage openAccountPage() {
         open("/my-account");
 
         return this;
     }
 
-    public EditAccountPage editFullName(String value) {
+    public EditingUserDataPage editFullName(String value) {
         fullNameInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage editPhoneNumber(String value) {
+    public EditingUserDataPage editPhoneNumber(String value) {
         phoneNumberInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage editCompanyName(String value) {
+    public EditingUserDataPage editCompanyName(String value) {
         companyNameInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage editCompanyAddress(String value) {
+    public EditingUserDataPage editCompanyAddress(String value) {
         companyAddressInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage editCompanyInn(String value) {
+    public EditingUserDataPage editCompanyInn(String value) {
         companyInnInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage editCompanyKpp(String value) {
+    public EditingUserDataPage editCompanyKpp(String value) {
         companyKppInput.setValue(value);
 
         return this;
     }
 
-    public EditAccountPage clickSubmitUpdateButton() {
+    public EditingUserDataPage clickSubmitUpdateButton() {
         submitUpdateButton.click();
         return this;
     }
 
-    public EditAccountPage verifyUpdateResults(String fullName, String phoneNumber, String companyName,
-                                               String companyAddress, String companyInn, String companyKpp) {
+    public EditingUserDataPage verifyUpdateResults(String fullName, String phoneNumber, String companyName,
+                                                   String companyAddress, String companyInn, String companyKpp) {
         fullNameInput.shouldHave(value(fullName));
         phoneNumberInput.shouldHave(value(phoneNumber));
         companyNameInput.shouldHave(value(companyName));

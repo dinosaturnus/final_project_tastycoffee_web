@@ -1,20 +1,23 @@
-package tastycoffee.tests;
+package tastycoffee.tests.users;
 
 import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tastycoffee.pages.AuthorizationPage;
+import tastycoffee.pages.users.AuthorizationPage;
+import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.tests.TestData.*;
 
-public class AuthorizationsTests extends TestBase {
+public class AuthorizationTests extends TestBase {
 
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
-    @Epic("Авторизация")
+    @Epic("Действия с личным кабинетом пользователя")
+    @Feature("Авторизация")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий авторизации пользователя")
     @Tag("Happy path")
@@ -44,7 +47,8 @@ public class AuthorizationsTests extends TestBase {
 
     }
 
-    @Epic("Авторизация")
+    @Epic("Действия с личным кабинетом пользователя")
+    @Feature("Авторизация")
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного пароля при авторизации")
     @Tag("Негативный")
@@ -73,7 +77,8 @@ public class AuthorizationsTests extends TestBase {
         });
     }
 
-    @Epic("Авторизация")
+    @Epic("Действия с личным кабинетом пользователя")
+    @Feature("Авторизация")
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного логина при авторизации")
     @Tag("Негативный")

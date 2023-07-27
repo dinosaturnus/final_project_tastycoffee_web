@@ -1,4 +1,4 @@
-package tastycoffee.pages;
+package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class EditAvatarPage extends TestBase {
+public class EditingUserAvatarPage extends TestBase {
 
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
 
@@ -20,7 +20,7 @@ public class EditAvatarPage extends TestBase {
             deleteAvatarButton = $(".deleteAvatar");
 
 
-    public EditAvatarPage authorizationUser(String valueEmail, String valuePass) {
+    public EditingUserAvatarPage authorizationUser(String valueEmail, String valuePass) {
 
         authorizationComponent.openAuthorizationPage();
         authorizationComponent.setEmail(valueEmail);
@@ -31,37 +31,37 @@ public class EditAvatarPage extends TestBase {
         return this;
     }
 
-    public EditAvatarPage openAccountPage() {
+    public EditingUserAvatarPage openAccountPage() {
         open("/my-account");
 
         return this;
     }
 
-    public EditAvatarPage clickEditAvatarButton() {
+    public EditingUserAvatarPage clickEditAvatarButton() {
         editAvatarButton.$(withText("Поменять фото профиля")).click();
 
         return this;
     }
 
-    public EditAvatarPage uploadImage(String value) {
+    public EditingUserAvatarPage uploadImage(String value) {
         uploadImageButton.uploadFromClasspath(value);
 
         return this;
     }
 
-    public EditAvatarPage saveImage() {
+    public EditingUserAvatarPage saveImage() {
         saveImageButton.click();
 
         return this;
     }
 
-    public EditAvatarPage verifyNewAvatar() {
+    public EditingUserAvatarPage verifyNewAvatar() {
         previewImage.shouldBe(visible);
 
         return this;
     }
 
-    public EditAvatarPage deleteAvatar() {
+    public EditingUserAvatarPage deleteAvatar() {
         deleteAvatarButton.click();
 
         return this;
