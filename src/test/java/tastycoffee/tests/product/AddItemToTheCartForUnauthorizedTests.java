@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.product.AddItemToTheCartPage;
 import tastycoffee.tests.TestBase;
@@ -18,11 +19,12 @@ public class AddItemToTheCartForUnauthorizedTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
-    @Story("Неавторизованный пользователь")
-    @Story("Страница товара")
     @DisplayName("Успешный сценарий добавления товара в корзину со страницы товара под неавторизованным пользователем")
-    @Tag("Happy path")
-    @Tag("Smoke")
+    @Tags({
+            @Tag ("Happy path"),
+            @Tag ("Smoke"),
+            @Tag("Unauthorized")
+    })
     @Test
     void positiveAddItemToTheCartFromTheProductPageTest() {
 

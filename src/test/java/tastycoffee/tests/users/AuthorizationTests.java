@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.users.AuthorizationPage;
 import tastycoffee.tests.TestBase;
@@ -20,8 +21,10 @@ public class AuthorizationTests extends TestBase {
     @Feature("Авторизация")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий авторизации пользователя")
-    @Tag("Happy path")
-    @Tag("Smoke")
+    @Tags({
+            @Tag ("Happy path"),
+            @Tag ("Smoke")
+    })
     @Test
     void positiveAuthorizationTest() {
 
@@ -51,8 +54,10 @@ public class AuthorizationTests extends TestBase {
     @Feature("Авторизация")
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного пароля при авторизации")
-    @Tag("Негативный")
-    @Tag("Smoke")
+    @Tags({
+            @Tag ("Negative"),
+            @Tag ("Smoke")
+    })
     @Test
     void negativeInvalidPasswordAuthorizationTest() {
 
@@ -81,8 +86,10 @@ public class AuthorizationTests extends TestBase {
     @Feature("Авторизация")
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного логина при авторизации")
-    @Tag("Негативный")
-    @Tag("Smoke")
+    @Tags({
+            @Tag ("Negative"),
+            @Tag ("Smoke")
+    })
     @Test
     void negativeInvalidEmailAuthorizationTest() {
 

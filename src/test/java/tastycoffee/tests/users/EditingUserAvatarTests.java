@@ -6,6 +6,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import tastycoffee.pages.users.EditingUserAvatarPage;
@@ -35,8 +36,10 @@ public class EditingUserAvatarTests extends TestBase {
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования аватара пользователя")
-    @Tag("Happy path")
-    @Tag("Regress")
+    @Tags({
+            @Tag ("Happy path"),
+            @Tag ("Regress")
+    })
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpeg, .webp и .png при изменении аватара")
     void paramTest(String imagePath) {
 

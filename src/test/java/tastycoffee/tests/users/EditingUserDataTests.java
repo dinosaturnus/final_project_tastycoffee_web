@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.users.EditingUserDataPage;
 import tastycoffee.tests.TestBase;
@@ -20,8 +21,10 @@ public class EditingUserDataTests extends TestBase {
     @Feature("Редактирование личной информации")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования данных пользователя (без логина и пароля)")
-    @Tag("Happy path")
-    @Tag("Smoke")
+    @Tags({
+            @Tag ("Happy path"),
+            @Tag ("Smoke")
+    })
     @Test
     void positiveAccountEditWithoutEmailAndPasswordTest() {
 
