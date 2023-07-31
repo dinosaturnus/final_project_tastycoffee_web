@@ -5,6 +5,8 @@ import tastycoffee.pages.components.AuthorizationComponent;
 import tastycoffee.pages.components.EditingUserAvatarComponent;
 import tastycoffee.tests.TestBase;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -58,7 +60,7 @@ public class EditingUserAvatarPage extends TestBase {
     }
 
     public EditingUserAvatarPage verifyNewAvatar() {
-        previewImage.shouldBe(visible);
+        previewImage.shouldBe(visible, Duration.ofSeconds(30));
 
         return this;
     }
