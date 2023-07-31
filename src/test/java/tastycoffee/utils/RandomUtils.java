@@ -31,4 +31,8 @@ public class RandomUtils {
         return new Faker().random().hex(9);
     }
 
+    public static String getRandomImage() {
+       return faker.options().option("bird.jpg", "cat.webp", "dog.png");
+    }
+
 }

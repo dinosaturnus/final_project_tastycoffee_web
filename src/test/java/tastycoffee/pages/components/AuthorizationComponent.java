@@ -17,13 +17,13 @@ public class AuthorizationComponent extends TestBase {
         open("/login");
     }
 
-    public void setEmail(String value) {
-        emailInput.setValue(value);
+    public void setEmail(String email) {
+        emailInput.setValue(email);
 
     }
 
-    public void setPassword(String value) {
-        passwordInput.setValue(value);
+    public void setPassword(String password) {
+        passwordInput.setValue(password);
 
     }
 

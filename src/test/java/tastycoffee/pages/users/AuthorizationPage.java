@@ -20,14 +20,14 @@ public class AuthorizationPage extends TestBase {
         return this;
     }
 
-    public AuthorizationPage setEmail(String value) {
-        emailInput.setValue(value);
+    public AuthorizationPage setEmail(String email) {
+        emailInput.setValue(email);
 
         return this;
     }
 
-    public AuthorizationPage setPassword(String value) {
-        passwordInput.setValue(value);
+    public AuthorizationPage setPassword(String password) {
+        passwordInput.setValue(password);
 
         return this;
     }

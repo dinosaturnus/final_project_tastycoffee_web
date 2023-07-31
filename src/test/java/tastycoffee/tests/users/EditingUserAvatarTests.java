@@ -6,7 +6,6 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import tastycoffee.pages.users.EditingUserAvatarPage;
@@ -19,10 +18,12 @@ public class EditingUserAvatarTests extends TestBase {
 
     static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
 
+    @DisplayName("Предварительные шаги: авторизоваться под пользователем" +
+            "и перейти на страницу личного кабинета")
     @BeforeAll
-    static void autho() {
+    static void authorizationUserPrecondition() {
         step("Открыть страницу авторизации и авторизоваться", () -> {
-            editingUserAvatarPage.authorizationUser(email, password);
+            editingUserAvatarPage.authorizationUser(EMAIL, PASSWORD);
         });
 
         step("Открыть страницу личного кабинета", () -> {
@@ -36,12 +37,9 @@ public class EditingUserAvatarTests extends TestBase {
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования аватара пользователя")
-    @Tags({
-            @Tag ("Happy path"),
-            @Tag ("Regress")
-    })
-    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpeg, .webp и .png при изменении аватара")
-    void paramTest(String imagePath) {
+    @Tag ("Regress")
+    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
+    void positiveEditingUserAvatarTest(String imagePath) {
 
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()
@@ -57,5 +55,8 @@ public class EditingUserAvatarTests extends TestBase {
             editingUserAvatarPage.deleteAvatar();
         });
 
+        step("Проверить, что аватар удален", () -> {
+            editingUserAvatarPage.checkThatAvatarRemoved();
+        });
     }
 }

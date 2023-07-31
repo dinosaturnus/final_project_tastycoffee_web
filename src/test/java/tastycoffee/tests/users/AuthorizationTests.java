@@ -23,7 +23,8 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Успешный сценарий авторизации пользователя")
     @Tags({
             @Tag ("Happy path"),
-            @Tag ("Smoke")
+            @Tag ("Smoke"),
+            @Tag ("Regress")
     })
     @Test
     void positiveAuthorizationTest() {
@@ -33,11 +34,11 @@ public class AuthorizationTests extends TestBase {
         });
 
         step("Ввеести логин", () -> {
-            authorizationPage.setEmail(email);
+            authorizationPage.setEmail(EMAIL);
         });
 
         step("Ввести пароль", () -> {
-            authorizationPage.setPassword(password);
+            authorizationPage.setPassword(PASSWORD);
         });
 
         step("Нажать кнопку 'Войти'", () -> {
@@ -56,7 +57,8 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Ввод неверного пароля при авторизации")
     @Tags({
             @Tag ("Negative"),
-            @Tag ("Smoke")
+            @Tag ("Smoke"),
+            @Tag ("Regress")
     })
     @Test
     void negativeInvalidPasswordAuthorizationTest() {
@@ -66,11 +68,11 @@ public class AuthorizationTests extends TestBase {
         });
 
         step("Ввести логин", () -> {
-            authorizationPage.setEmail(email);
+            authorizationPage.setEmail(EMAIL);
         });
 
         step("Ввести неверный пароль", () -> {
-            authorizationPage.setPassword(password + "1");
+            authorizationPage.setPassword(PASSWORD + "1");
         });
 
         step("Нажать кнопку 'Войти'", () -> {
@@ -88,7 +90,8 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Ввод неверного логина при авторизации")
     @Tags({
             @Tag ("Negative"),
-            @Tag ("Smoke")
+            @Tag ("Smoke"),
+            @Tag ("Regress")
     })
     @Test
     void negativeInvalidEmailAuthorizationTest() {
@@ -98,11 +101,11 @@ public class AuthorizationTests extends TestBase {
         });
 
         step("Ввести неверный логин", () -> {
-            authorizationPage.setEmail(email + "1");
+            authorizationPage.setEmail(EMAIL + "1");
         });
 
         step("Ввести пароль", () -> {
-            authorizationPage.setPassword(password);
+            authorizationPage.setPassword(PASSWORD);
         });
 
         step("Нажать кнопку 'Войти'", () -> {

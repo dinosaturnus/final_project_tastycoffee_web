@@ -2,6 +2,7 @@ package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
+import tastycoffee.pages.components.EditingUserAvatarComponent;
 import tastycoffee.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -17,14 +18,15 @@ public class EditingUserAvatarPage extends TestBase {
             uploadImageButton = $("#upload-profile-file"),
             saveImageButton = $("#upload-avatar-result"),
             previewImage = $(".userAvatar-image"),
-            deleteAvatarButton = $(".deleteAvatar");
+            deleteAvatarButton = $(".deleteAvatar"),
+            noAvatarPreview = $(".no_img");
 
 
-    public EditingUserAvatarPage authorizationUser(String valueEmail, String valuePass) {
+    public EditingUserAvatarPage authorizationUser(String email, String password) {
 
         authorizationComponent.openAuthorizationPage();
-        authorizationComponent.setEmail(valueEmail);
-        authorizationComponent.setPassword(valuePass);
+        authorizationComponent.setEmail(email);
+        authorizationComponent.setPassword(password);
         authorizationComponent.clickSubmitButton();
         authorizationComponent.verifyAuthorization();
 
@@ -43,8 +45,8 @@ public class EditingUserAvatarPage extends TestBase {
         return this;
     }
 
-    public EditingUserAvatarPage uploadImage(String value) {
-        uploadImageButton.uploadFromClasspath(value);
+    public EditingUserAvatarPage uploadImage(String imagePath) {
+        uploadImageButton.uploadFromClasspath(imagePath);
 
         return this;
     }
@@ -67,4 +69,9 @@ public class EditingUserAvatarPage extends TestBase {
         return this;
     }
 
+    public EditingUserAvatarPage checkThatAvatarRemoved() {
+        noAvatarPreview.shouldBe(visible);
+
+        return this;
+    }
 }

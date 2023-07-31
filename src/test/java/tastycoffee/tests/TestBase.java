@@ -17,10 +17,9 @@ public class TestBase {
     static void beforeAll() {
         Configuration.browserSize = "1280x1920";
         Configuration.baseUrl = "https://shop.tastycoffee.ru";
-//        RestAssured.baseURI = "https://shop.tastycoffee.ru";
         Configuration.pageLoadStrategy = "eager";
-//        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

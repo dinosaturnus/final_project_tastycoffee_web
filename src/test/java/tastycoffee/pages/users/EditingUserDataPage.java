@@ -2,6 +2,7 @@ package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
+import tastycoffee.pages.components.EditingUserAvatarComponent;
 import tastycoffee.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.value;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class EditingUserDataPage extends TestBase {
 
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
+    EditingUserAvatarComponent editingUserAvatarComponent = new EditingUserAvatarComponent();
 
     SelenideElement fullNameInput = $(".full_name"),
             phoneNumberInput = $(".input-wrap .phone-mask"),
@@ -19,11 +21,11 @@ public class EditingUserDataPage extends TestBase {
             companyKppInput = $(".input-wrap [name='legal_kpp']"),
             submitUpdateButton = $("#submit-update-account");
 
-    public EditingUserDataPage authorizationUser(String valueEmail, String valuePass) {
+    public EditingUserDataPage authorizationUser(String email, String password) {
 
         authorizationComponent.openAuthorizationPage();
-        authorizationComponent.setEmail(valueEmail);
-        authorizationComponent.setPassword(valuePass);
+        authorizationComponent.setEmail(email);
+        authorizationComponent.setPassword(password);
         authorizationComponent.clickSubmitButton();
         authorizationComponent.verifyAuthorization();
 
@@ -36,38 +38,38 @@ public class EditingUserDataPage extends TestBase {
         return this;
     }
 
-    public EditingUserDataPage editFullName(String value) {
-        fullNameInput.setValue(value);
+    public EditingUserDataPage editFullName(String fullName) {
+        fullNameInput.setValue(fullName);
 
         return this;
     }
 
-    public EditingUserDataPage editPhoneNumber(String value) {
-        phoneNumberInput.setValue(value);
+    public EditingUserDataPage editPhoneNumber(String phoneNumber) {
+        phoneNumberInput.setValue(phoneNumber);
 
         return this;
     }
 
-    public EditingUserDataPage editCompanyName(String value) {
-        companyNameInput.setValue(value);
+    public EditingUserDataPage editCompanyName(String companyName) {
+        companyNameInput.setValue(companyName);
 
         return this;
     }
 
-    public EditingUserDataPage editCompanyAddress(String value) {
-        companyAddressInput.setValue(value);
+    public EditingUserDataPage editCompanyAddress(String companyAddress) {
+        companyAddressInput.setValue(companyAddress);
 
         return this;
     }
 
-    public EditingUserDataPage editCompanyInn(String value) {
-        companyInnInput.setValue(value);
+    public EditingUserDataPage editCompanyInn(String companyInn) {
+        companyInnInput.setValue(companyInn);
 
         return this;
     }
 
-    public EditingUserDataPage editCompanyKpp(String value) {
-        companyKppInput.setValue(value);
+    public EditingUserDataPage editCompanyKpp(String companyKpp) {
+        companyKppInput.setValue(companyKpp);
 
         return this;
     }
@@ -89,4 +91,21 @@ public class EditingUserDataPage extends TestBase {
         return this;
     }
 
+    public EditingUserDataPage uploadedAvatar(String imagePath) {
+        editingUserAvatarComponent.uploadingAndSavingAvatar(imagePath);
+
+        return this;
+    }
+
+    public EditingUserDataPage verifyAvatarUploaded() {
+        editingUserAvatarComponent.verifyNewAvatar();
+
+        return this;
+    }
+
+    public EditingUserDataPage deleteAvatar() {
+        editingUserAvatarComponent.deleteAvatarAndVerifyThis();
+
+        return this;
+    }
 }
