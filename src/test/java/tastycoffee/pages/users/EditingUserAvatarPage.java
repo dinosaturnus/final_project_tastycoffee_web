@@ -60,7 +60,7 @@ public class EditingUserAvatarPage extends TestBase {
     }
 
     public EditingUserAvatarPage verifyNewAvatar() {
-        previewImage.shouldBe(visible, Duration.ofSeconds(30));
+        previewImage.shouldBe(visible);
 
         return this;
     }
