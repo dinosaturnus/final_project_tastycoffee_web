@@ -67,20 +67,20 @@ test {
     useJUnitPlatform()
 }
 
-task Smoke_test(type: Test) {
+task smoke_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple")
+        includeTags("Smoke")
     }
 }
 
-task Regress_test(type: Test) {
+task regress_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple")
+        includeTags("Regress")
     }
 }
-task Parameterized_test(type: Test) {
+task parameterized_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple")
+        includeTags("Parameterized")
     }
 
 }
