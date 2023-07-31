@@ -2,7 +2,7 @@ package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
-import tastycoffee.pages.components.EditingUserAvatarComponent;
+import tastycoffee.pages.components.UserAvatarComponent;
 import tastycoffee.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.value;
@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class EditingUserDataPage extends TestBase {
 
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
-    EditingUserAvatarComponent editingUserAvatarComponent = new EditingUserAvatarComponent();
+    UserAvatarComponent userAvatarComponent = new UserAvatarComponent();
 
     SelenideElement fullNameInput = $(".full_name"),
             phoneNumberInput = $(".input-wrap .phone-mask"),
@@ -92,19 +92,19 @@ public class EditingUserDataPage extends TestBase {
     }
 
     public EditingUserDataPage uploadedAvatar(String imagePath) {
-        editingUserAvatarComponent.uploadingAndSavingAvatar(imagePath);
+        userAvatarComponent.uploadingAndSavingAvatar(imagePath);
 
         return this;
     }
 
     public EditingUserDataPage verifyAvatarUploaded() {
-        editingUserAvatarComponent.verifyNewAvatar();
+        userAvatarComponent.verifyNewAvatar();
 
         return this;
     }
 
     public EditingUserDataPage deleteAvatar() {
-        editingUserAvatarComponent.deleteAvatarAndVerifyThis();
+        userAvatarComponent.deleteAvatarAndVerifyThis();
 
         return this;
     }

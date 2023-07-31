@@ -2,10 +2,7 @@ package tastycoffee.pages.users;
 
 import com.codeborne.selenide.SelenideElement;
 import tastycoffee.pages.components.AuthorizationComponent;
-import tastycoffee.pages.components.EditingUserAvatarComponent;
 import tastycoffee.tests.TestBase;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
@@ -20,9 +17,7 @@ public class EditingUserAvatarPage extends TestBase {
             uploadImageButton = $("#upload-profile-file"),
             saveImageButton = $("#upload-avatar-result"),
             previewImage = $(".userAvatar-image"),
-            deleteAvatarButton = $(".deleteAvatar"),
-            noAvatarPreview = $(".no_img");
-
+            deleteAvatarButton = $(".deleteAvatar");
 
     public EditingUserAvatarPage authorizationUser(String email, String password) {
 
@@ -72,7 +67,7 @@ public class EditingUserAvatarPage extends TestBase {
     }
 
     public EditingUserAvatarPage checkThatAvatarRemoved() {
-        noAvatarPreview.shouldBe(visible);
+        previewImage.shouldNotBe(visible);
 
         return this;
     }

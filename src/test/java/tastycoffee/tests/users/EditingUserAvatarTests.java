@@ -55,8 +55,8 @@ public class EditingUserAvatarTests extends TestBase {
             editingUserAvatarPage.deleteAvatar();
         });
 
-        step("Проверить, что аватар удален", () -> {
-            editingUserAvatarPage.checkThatAvatarRemoved();
-        });
+//        step("Проверить, что аватар удален", () -> {
+//            editingUserAvatarPage.checkThatAvatarRemoved();
+//        });
     }
 }

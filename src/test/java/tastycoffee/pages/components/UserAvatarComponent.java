@@ -6,14 +6,13 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class EditingUserAvatarComponent {
+public class UserAvatarComponent {
 
     SelenideElement editAvatarButton = $(".userAvatar-buttons"),
     uploadImageButton = $("#upload-profile-file"),
     saveImageButton = $("#upload-avatar-result"),
     previewImage = $(".userAvatar-image"),
-    deleteAvatarButton = $(".deleteAvatar"),
-    noAvatarPreview = $(".no_img");
+    deleteAvatarButton = $(".deleteAvatar");
 
     public void uploadingAndSavingAvatar(String imagePath) {
         editAvatarButton.$(withText("Поменять фото профиля")).click();
@@ -27,6 +26,6 @@ public class EditingUserAvatarComponent {
 
     public void deleteAvatarAndVerifyThis() {
         deleteAvatarButton.click();
-        noAvatarPreview.shouldBe(visible);
+        previewImage.shouldNotBe(visible);
     }
 }
