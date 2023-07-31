@@ -37,7 +37,6 @@ public class EmptyingTheCardTests extends TestBase {
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke"),
-            @Tag("Unauthorized")
     })
     @Test
     void positiveDeleteOneItemsFromTheCartTest() {
@@ -62,7 +61,6 @@ public class EmptyingTheCardTests extends TestBase {
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke"),
-            @Tag("Unauthorized")
     })
     @Test
     void positiveDeleteAllItemsFromTheCartTest() {

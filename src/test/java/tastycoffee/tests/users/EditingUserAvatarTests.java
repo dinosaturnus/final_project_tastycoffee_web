@@ -37,7 +37,7 @@ public class EditingUserAvatarTests extends TestBase {
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
     @DisplayName("Успешный сценарий редактирования аватара пользователя")
-    @Tag ("Regress")
+    @Tag ("Parameterized")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void positiveEditingUserAvatarTest(String imagePath) {
 

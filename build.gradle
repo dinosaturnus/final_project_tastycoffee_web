@@ -66,3 +66,21 @@ tasks.withType(Test) {
 test {
     useJUnitPlatform()
 }
+
+task Smoke_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple")
+    }
+}
+
+task Regress_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple")
+    }
+}
+task Parameterized_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple")
+    }
+
+}
