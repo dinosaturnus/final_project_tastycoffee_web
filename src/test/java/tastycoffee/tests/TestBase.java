@@ -9,17 +9,20 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import tastycoffee.helpers.Attach;
+import tastycoffee.properties.SystemProperties;
 
 import java.util.Map;
 
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1280x1920";
+        Configuration.browser = SystemProperties.browserProperty;
+        Configuration.browserSize = SystemProperties.browserSizeProperty;
+        Configuration.browserVersion = SystemProperties.browserVersionProperty;
         Configuration.baseUrl = "https://shop.tastycoffee.ru";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
