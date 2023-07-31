@@ -19,10 +19,10 @@ public class TestBase {
         Configuration.browser = SystemProperties.browserProperty;
         Configuration.browserSize = SystemProperties.browserSizeProperty;
         Configuration.browserVersion = SystemProperties.browserVersionProperty;
-        Configuration.baseUrl = "https://shop.tastycoffee.ru";
+        Configuration.baseUrl = SystemProperties.baseUrlProperty;
         Configuration.pageLoadStrategy = "eager";
 //        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = SystemProperties.remoteSelenoidProperty;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
