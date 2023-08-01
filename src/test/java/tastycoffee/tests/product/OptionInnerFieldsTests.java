@@ -1,5 +1,11 @@
 package tastycoffee.tests.product;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.product.OptionInnerFieldsPage;
 import tastycoffee.tests.TestBase;
@@ -11,6 +17,13 @@ public class OptionInnerFieldsTests extends TestBase {
 
     OptionInnerFieldsPage optionInnerFieldsPage = new OptionInnerFieldsPage();
 
+    @Epic("Действия с товаром")
+    @Feature("Выбор помола")
+    @Story("Позитивный сценарий")
+    @DisplayName("Проверка корректности работы и отображения выпадающего меню с выбором помола")
+    @Tags({
+            @Tag("Regress")
+    })
     @Test
     void openMillingDropdownMenuAndSelectedOptionTest() {
         step("Открыть страницу товара", () -> {

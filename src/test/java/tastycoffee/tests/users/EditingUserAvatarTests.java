@@ -30,9 +30,12 @@ public class EditingUserAvatarTests extends TestBase {
         });
     }
 
+
+    @DisplayName("Очистка куков после всех циклов теста для деавторизации пользователя - " +
+            "необходимо при запуске всего скоупа тестов проекта, иначе последующие тесты падают")
     @AfterAll
     static void clearBrowserCookies() {
-        step("Очистка куков после всех циклов теста для деавторизации пользователя", () -> {
+        step("Очистка куков и деавторизация", () -> {
             Selenide.clearBrowserCookies();
         });
     }
