@@ -11,7 +11,7 @@ import tastycoffee.pages.users.AuthorizationPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.tests.TestData.*;
+import static tastycoffee.data.TestData.*;
 
 public class AuthorizationTests extends TestBase {
 

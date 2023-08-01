@@ -5,7 +5,7 @@ import tastycoffee.pages.product.OptionInnerFieldsPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.tests.TestData.*;
+import static tastycoffee.data.TestData.*;
 
 public class OptionInnerFieldsTests extends TestBase {
 

@@ -3,6 +3,7 @@ package tastycoffee.tests.users;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,7 +13,7 @@ import tastycoffee.pages.users.EditingUserAvatarPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.tests.TestData.*;
+import static tastycoffee.data.TestData.*;
 
 public class EditingUserAvatarTests extends TestBase {
 

@@ -8,8 +8,8 @@ import tastycoffee.pages.product.AddProductToTheCartPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.tests.TestData.CANDY_NAME;
-import static tastycoffee.tests.TestData.CANDY_URL;
+import static tastycoffee.data.TestData.CANDY_NAME;
+import static tastycoffee.data.TestData.CANDY_URL;
 
 public class AddProductToTheCartTests extends TestBase {
 
