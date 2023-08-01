@@ -32,7 +32,7 @@ public class EditingUserAvatarTests extends TestBase {
 
     @AfterAll
     static void clearBrowserCookies() {
-        step("Очистка куков после всех тестов для деавторизации пользователя", () -> {
+        step("Очистка куков после всех циклов теста для деавторизации пользователя", () -> {
             Selenide.clearBrowserCookies();
         });
     }
