@@ -47,7 +47,7 @@ public class AddProductToTheCartTests extends TestBase {
             @Tag("Smoke")
     })
     @Test
-    void incrementCartCounterAfterAddingProductTest() {
+    void cartCounterIncrementedAfterAddingProductTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
         });
@@ -74,7 +74,7 @@ public class AddProductToTheCartTests extends TestBase {
             @Tag("Smoke")
     })
     @Test
-    void changingBuyButtonTextAfterAddingProductTheCartTest() {
+    void buyButtonTextChangesAfterAddingProductTheCartTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
         });
@@ -97,7 +97,7 @@ public class AddProductToTheCartTests extends TestBase {
             @Tag("Smoke")
     })
     @Test
-    void checkingTheCartForAddingProductsTest() {
+    void checkingThatTheProductAppearsInTheCartAfterClickByButtonTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
         });
