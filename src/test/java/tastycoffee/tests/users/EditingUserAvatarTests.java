@@ -32,7 +32,9 @@ public class EditingUserAvatarTests extends TestBase {
 
     @AfterAll
     static void clearBrowserCookies() {
-        Selenide.clearBrowserCookies();
+        step("Очистка куков после всех тестов для деавторизации пользователя", () -> {
+            Selenide.clearBrowserCookies();
+        });
     }
 
     @CsvFileSource(resources = "/avatars_path.csv")
@@ -40,8 +42,8 @@ public class EditingUserAvatarTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешный сценарий редактирования аватара пользователя")
-    @Tag ("Parameterized")
+    @DisplayName("Успешный сценарий редактирования аватара пользователя.")
+    @Tag("Parameterized")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void positiveEditingUserAvatarTest(String imagePath) {
 
@@ -59,8 +61,8 @@ public class EditingUserAvatarTests extends TestBase {
             editingUserAvatarPage.deleteAvatar();
         });
 
-//        step("Проверить, что аватар удален", () -> {
-//            editingUserAvatarPage.checkThatAvatarRemoved();
-//        });
+        step("Проверить, что аватар удален", () -> {
+            editingUserAvatarPage.checkThatAvatarRemoved();
+        });
     }
 }
