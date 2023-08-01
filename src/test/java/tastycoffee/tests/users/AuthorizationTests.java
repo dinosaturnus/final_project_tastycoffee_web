@@ -79,7 +79,7 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверить ошибку авторизации", () -> {
+        step("Проверить наличие ошибки авторизации", () -> {
             authorizationPage.verifyErrorAuthorization();
         });
     }
@@ -112,7 +112,7 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверить ошибку авторизации", () -> {
+        step("Проверить наличие ошибки авторизации", () -> {
             authorizationPage.verifyErrorAuthorization();
         });
     }
