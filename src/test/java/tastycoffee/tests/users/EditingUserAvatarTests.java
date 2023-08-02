@@ -44,9 +44,9 @@ public class EditingUserAvatarTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
+    @DisplayName("Редактирование аватара пользователя")
     @Tag("Parameterized")
-    @ParameterizedTest(name = "Редактирование аватара пользователя. " +
-            "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
+    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void positiveEditingUserAvatarTest(String imagePath) {
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()
