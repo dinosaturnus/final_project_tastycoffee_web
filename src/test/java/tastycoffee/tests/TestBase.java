@@ -21,7 +21,6 @@ public class TestBase {
         Configuration.browserVersion = SystemProperties.browserVersionProperty;
         Configuration.baseUrl = SystemProperties.baseUrlProperty;
         Configuration.pageLoadStrategy = "eager";
-//        Configuration.browserBinary = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
         Configuration.remote = SystemProperties.remoteSelenoidProperty;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

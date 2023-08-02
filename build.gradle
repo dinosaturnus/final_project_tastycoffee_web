@@ -6,7 +6,7 @@ plugins {
 group 'com.dinosaturnus'
 version '1.0-SNAPSHOT'
 
-def selenideVersion = "6.16.1",
+def selenideVersion = "6.17.0",
     junitVersion = "5.9.3",
     slf4jVersion = "2.0.7",
     allureSelenideVersion = "2.22.2",
