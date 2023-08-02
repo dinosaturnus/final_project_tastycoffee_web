@@ -21,15 +21,15 @@ public class TestBase {
         Configuration.browserVersion = SystemProperties.browserVersionProperty;
         Configuration.baseUrl = SystemProperties.baseUrlProperty;
         Configuration.pageLoadStrategy = "eager";
+        Configuration.remote = SystemProperties.remoteSelenoidProperty;
 
-//        Configuration.remote = SystemProperties.remoteSelenoidProperty;
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+
+        Configuration.browserCapabilities = capabilities;
 
     }
 
