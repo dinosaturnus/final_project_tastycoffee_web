@@ -13,8 +13,8 @@ import static tastycoffee.data.TestData.*;
 public class EmptyingTheCardTests extends TestBase {
     EmptyingTheCartPage emptyingTheCartPage = new EmptyingTheCartPage();
 
-    @DisplayName("Предварительные шаги: добавление товаров в корзину, " +
-            "открытие корзины и проверка добавленных товаров")
+    @DisplayName("Предварительные шаги: добавить товары в корзину, " +
+            "открыть корзину и проверить наличие добавленных товаров")
     @BeforeEach
     public void addProductsToTheCartPrecondition() {
         step("Добавить товары в корзину", () -> {
@@ -32,7 +32,7 @@ public class EmptyingTheCardTests extends TestBase {
     @Epic("Действия с корзиной")
     @Feature("Удаление одного товара")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешное удаление одного товара из корзины")
+    @DisplayName("Удаление одного товара из корзины через кнопку 'Удалить' в карточке товара")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke"),
@@ -55,7 +55,7 @@ public class EmptyingTheCardTests extends TestBase {
     @Epic("Действия с корзиной")
     @Feature("Удаление всех товаров")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешное очищение корзины через кнопку 'Удалить все товары'")
+    @DisplayName("Полное очищение корзины через кнопку 'Удалить все товары'")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke"),

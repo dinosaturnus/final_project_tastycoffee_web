@@ -19,7 +19,7 @@ public class AuthorizationTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Авторизация")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешный сценарий авторизации пользователя")
+    @DisplayName("Успешная аутентификация пользователя")
     @Tags({
             @Tag ("Happy path"),
             @Tag ("Smoke"),

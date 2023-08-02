@@ -16,8 +16,8 @@ import static tastycoffee.data.TestData.*;
 public class EditingUserAvatarTests extends TestBase {
     static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
 
-    @DisplayName("Предварительные шаги: авторизоваться под пользователем" +
-            "и перейти на страницу личного кабинета")
+    @DisplayName("Предварительные шаги: авторизация под пользователем" +
+            "и переход на страницу личного кабинета")
     @BeforeAll
     static void authorizationUserPrecondition() {
         step("Открыть страницу авторизации и авторизоваться", () -> {
@@ -45,7 +45,7 @@ public class EditingUserAvatarTests extends TestBase {
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
     @Tag("Parameterized")
-    @ParameterizedTest(name = "Успешный сценарий редактирования аватара пользователя. " +
+    @ParameterizedTest(name = "Редактирование аватара пользователя. " +
             "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void positiveEditingUserAvatarTest(String imagePath) {
         step("Выбрать и загрузить новый аватар", () -> {

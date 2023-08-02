@@ -17,7 +17,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
-    @DisplayName("Проверка появления информационного поп-апа о добавлении товара в корзину")
+    @DisplayName("Появление информационного поп-апа при добавлении товара в корзину")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke")
@@ -40,7 +40,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
-    @DisplayName("Проверка увеличения счетчика товаров в мини-корзине в шапке")
+    @DisplayName("Увеличение счетчика товаров в мини-корзине в шапке после добавления товара в корзину")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke")
@@ -67,7 +67,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
-    @DisplayName("Проверка изменения текста кнопки 'Купить' после добавления товара в корзину")
+    @DisplayName("Изменение текста кнопки 'Купить' на 'В корзине' после добавления товара в корзину")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke")
@@ -94,7 +94,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Epic("Действия с товаром")
     @Feature("Добавление товара в корзину")
     @Story("Позитивный сценарий")
-    @DisplayName("Проверка наличия товара в корзине после его добавления через кнопку 'Купить'")
+    @DisplayName("Наличие товара на странице корзины после нажатия кнопки 'Купить'")
     @Tags({
             @Tag("Happy path"),
             @Tag("Smoke")
