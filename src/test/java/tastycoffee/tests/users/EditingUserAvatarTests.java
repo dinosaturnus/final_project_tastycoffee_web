@@ -47,7 +47,7 @@ public class EditingUserAvatarTests extends TestBase {
     @DisplayName("Редактирование аватара пользователя")
     @Tag("Parameterized")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
-    void positiveEditingUserAvatarTest(String imagePath) {
+    void editingUserAvatarTest(String imagePath) {
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()
                     .uploadImage(imagePath)

@@ -38,7 +38,7 @@ public class EmptyingTheCardTests extends TestBase {
             @Tag("Smoke"),
     })
     @Test
-    void positiveDeleteOneItemsFromTheCartTest() {
+    void deleteOneItemsFromTheCartTest() {
         step("Удалить один товар", () -> {
             emptyingTheCartPage.deleteOneItem(NUTTY_NAME);
         });
@@ -61,7 +61,7 @@ public class EmptyingTheCardTests extends TestBase {
             @Tag("Smoke"),
     })
     @Test
-    void positiveDeleteAllItemsFromTheCartTest() {
+    void deleteAllItemsFromTheCartTest() {
         step("Очистить корзину через кнопку 'Удалить все товары'", () -> {
             emptyingTheCartPage.deleteAllItems();
         });

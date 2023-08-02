@@ -23,7 +23,7 @@ public class EditingUserDataTests extends TestBase {
             @Tag ("Regress")
     })
     @Test
-    void positiveUserDataEditingTest() {
+    void userDataEditingTest() {
         step("Открыть страницу авторизации и авторизоваться", () -> {
             editingUserDataPage.authorizationUser(EMAIL, PASSWORD);
         });

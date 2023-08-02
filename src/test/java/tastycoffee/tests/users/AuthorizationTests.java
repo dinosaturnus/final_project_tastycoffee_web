@@ -1,5 +1,6 @@
 package tastycoffee.tests.users;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -26,7 +27,7 @@ public class AuthorizationTests extends TestBase {
             @Tag ("Regress")
     })
     @Test
-    void positiveAuthorizationTest() {
+    void authorizationWithValidCredentialsTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });
@@ -58,7 +59,7 @@ public class AuthorizationTests extends TestBase {
             @Tag ("Regress")
     })
     @Test
-    void negativeInvalidPasswordAuthorizationTest() {
+    void invalidPasswordAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });
@@ -90,7 +91,7 @@ public class AuthorizationTests extends TestBase {
             @Tag ("Regress")
     })
     @Test
-    void negativeInvalidEmailAuthorizationTest() {
+    void invalidEmailAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });
