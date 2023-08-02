@@ -17,7 +17,7 @@ public class EmptyingTheCartPage extends TestBase {
 
     SelenideElement productCard = $(".goods-item"),
             deleteAllItemsButton = $(".goodsRemove"),
-            cartHeaderText = $(".content");
+            cartHeadlineText = $(".content");
 
     ElementsCollection listOfProductsInTheCart = $$("#basket-products");
 
@@ -61,7 +61,7 @@ public class EmptyingTheCartPage extends TestBase {
     }
 
     public EmptyingTheCartPage verifyCartIsEmpty() {
-        cartHeaderText.$(withText("Ваша корзина пуста")).shouldBe(visible);
+        cartHeadlineText.$(withText("Ваша корзина пуста")).shouldBe(visible);
 
         return this;
     }

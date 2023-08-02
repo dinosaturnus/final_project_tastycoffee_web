@@ -14,7 +14,6 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
 public class AuthorizationTests extends TestBase {
-
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Epic("Действия с личным кабинетом пользователя")
@@ -28,7 +27,6 @@ public class AuthorizationTests extends TestBase {
     })
     @Test
     void positiveAuthorizationTest() {
-
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });
@@ -48,7 +46,6 @@ public class AuthorizationTests extends TestBase {
         step("Проверить успешность авторизации", () -> {
             authorizationPage.verifyAuthorization();
         });
-
     }
 
     @Epic("Действия с личным кабинетом пользователя")
@@ -62,7 +59,6 @@ public class AuthorizationTests extends TestBase {
     })
     @Test
     void negativeInvalidPasswordAuthorizationTest() {
-
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });
@@ -95,7 +91,6 @@ public class AuthorizationTests extends TestBase {
     })
     @Test
     void negativeInvalidEmailAuthorizationTest() {
-
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
         });

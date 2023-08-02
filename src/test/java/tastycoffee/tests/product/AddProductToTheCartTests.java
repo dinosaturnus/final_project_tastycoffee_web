@@ -12,7 +12,6 @@ import static tastycoffee.data.TestData.CANDY_NAME;
 import static tastycoffee.data.TestData.CANDY_URL;
 
 public class AddProductToTheCartTests extends TestBase {
-
     AddProductToTheCartPage addProductToTheCartPage = new AddProductToTheCartPage();
 
     @Epic("Действия с товаром")
@@ -79,11 +78,15 @@ public class AddProductToTheCartTests extends TestBase {
             addProductToTheCartPage.openProductPage(CANDY_URL);
         });
 
+        step("Проверить, что текст кнопки дефолтный - 'Купить'", () -> {
+            addProductToTheCartPage.checkingDefaultBuyButtonText();
+        });
+
         step("Нажать кнопку 'Купить'", () -> {
             addProductToTheCartPage.addProductToTheCart();
         });
 
-        step("Проверить, что текст кнопки добавления в корзину изменился на 'В корзине'", () -> {
+        step("Проверить, что текст кнопки изменился на 'В корзине'", () -> {
             addProductToTheCartPage.verifyThatBuyButtonHasChangedItsText();
         });
     }
@@ -98,6 +101,14 @@ public class AddProductToTheCartTests extends TestBase {
     })
     @Test
     void checkingThatTheProductAppearsInTheCartAfterClickByButtonTest() {
+        step("Открыть страницу корзины", () -> {
+            addProductToTheCartPage.openCartPage();
+        });
+
+        step("Проверить, что корзина пуста", () -> {
+            addProductToTheCartPage.checkingThatCartIsEmpty();
+        });
+
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
         });
@@ -114,5 +125,4 @@ public class AddProductToTheCartTests extends TestBase {
             addProductToTheCartPage.verifyThatAddedProductAvailableInTheCart(CANDY_NAME);
         });
     }
-
 }

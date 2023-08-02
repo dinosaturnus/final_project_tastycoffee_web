@@ -11,7 +11,6 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
 public class EditingUserDataTests extends TestBase {
-
     EditingUserDataPage editingUserDataPage = new EditingUserDataPage();
 
     @Epic("Действия с личным кабинетом пользователя")
@@ -25,7 +24,6 @@ public class EditingUserDataTests extends TestBase {
     })
     @Test
     void positiveUserDataEditingTest() {
-
         step("Открыть страницу авторизации и авторизоваться", () -> {
             editingUserDataPage.authorizationUser(EMAIL, PASSWORD);
         });
@@ -44,7 +42,6 @@ public class EditingUserDataTests extends TestBase {
 
         step("Удалить загруженный аватар и проверить, что он удален", () -> {
             editingUserDataPage.deleteAvatar();
-
         });
 
         step("Редактировать данные пользователя", () -> {
@@ -64,7 +61,5 @@ public class EditingUserDataTests extends TestBase {
             editingUserDataPage.verifyUpdateResults(fullName, phoneNumber, companyName,
                     companyAddress, companyInn, companyKpp);
         });
-
-
     }
 }

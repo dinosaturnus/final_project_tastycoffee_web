@@ -13,16 +13,11 @@ public class AddProductToTheCartPage {
             headerNumberItemsInTheCart = $("#header_cart_text"),
             buyButton = $(".buyGoods"),
             buyButtonAdded = $(".blackBtn.added"),
-            productInformationInCart = $(".goods-col");
+            productInformationInCart = $(".goods-col"),
+            cartHeadlineText = $(".content");
 
     public AddProductToTheCartPage openProductPage(String productURL) {
         open("/coffee/" + productURL);
-
-        return this;
-    }
-
-    public AddProductToTheCartPage verifyHeaderCartIsEmpty() {
-        headerNumberItemsInTheCart.shouldHave(text("0 товаров"));
 
         return this;
     }
@@ -39,8 +34,20 @@ public class AddProductToTheCartPage {
         return this;
     }
 
+    public AddProductToTheCartPage verifyHeaderCartIsEmpty() {
+        headerNumberItemsInTheCart.shouldHave(text("0 товаров"));
+
+        return this;
+    }
+
     public AddProductToTheCartPage verifyThatValueInHeaderCartChangedByOne() {
         headerNumberItemsInTheCart.shouldHave(text("1 товар"));
+
+        return this;
+    }
+
+    public AddProductToTheCartPage checkingDefaultBuyButtonText() {
+        buyButton.shouldHave(text("Купить"));
 
         return this;
     }
@@ -59,6 +66,12 @@ public class AddProductToTheCartPage {
 
     public AddProductToTheCartPage verifyThatAddedProductAvailableInTheCart(String productName) {
         productInformationInCart.$(withText(productName)).shouldBe(visible);
+
+        return this;
+    }
+
+    public AddProductToTheCartPage checkingThatCartIsEmpty() {
+        cartHeadlineText.$(withText("Ваша корзина пуста")).shouldBe(visible);
 
         return this;
     }

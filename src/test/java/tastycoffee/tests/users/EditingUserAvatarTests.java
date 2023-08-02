@@ -14,7 +14,6 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
 public class EditingUserAvatarTests extends TestBase {
-
     static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
 
     @DisplayName("Предварительные шаги: авторизоваться под пользователем" +
@@ -45,11 +44,10 @@ public class EditingUserAvatarTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешный сценарий редактирования аватара пользователя.")
     @Tag("Parameterized")
-    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
+    @ParameterizedTest(name = "Успешный сценарий редактирования аватара пользователя. " +
+            "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void positiveEditingUserAvatarTest(String imagePath) {
-
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()
                     .uploadImage(imagePath)

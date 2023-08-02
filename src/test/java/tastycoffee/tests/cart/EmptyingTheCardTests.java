@@ -11,7 +11,6 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
 public class EmptyingTheCardTests extends TestBase {
-
     EmptyingTheCartPage emptyingTheCartPage = new EmptyingTheCartPage();
 
     @DisplayName("Предварительные шаги: добавление товаров в корзину, " +
@@ -40,7 +39,6 @@ public class EmptyingTheCardTests extends TestBase {
     })
     @Test
     void positiveDeleteOneItemsFromTheCartTest() {
-
         step("Удалить один товар", () -> {
             emptyingTheCartPage.deleteOneItem(NUTTY_NAME);
         });
@@ -65,8 +63,9 @@ public class EmptyingTheCardTests extends TestBase {
     @Test
     void positiveDeleteAllItemsFromTheCartTest() {
         step("Очистить корзину через кнопку 'Удалить все товары'", () -> {
-                    emptyingTheCartPage.deleteAllItems();
-                });
+            emptyingTheCartPage.deleteAllItems();
+        });
+
         step("Проверить, что появился текст 'Ваша корзина пуста'", () -> {
             emptyingTheCartPage.verifyCartIsEmpty();
         });

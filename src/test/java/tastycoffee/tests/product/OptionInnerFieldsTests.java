@@ -14,7 +14,6 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
 public class OptionInnerFieldsTests extends TestBase {
-
     OptionInnerFieldsPage optionInnerFieldsPage = new OptionInnerFieldsPage();
 
     @Epic("Действия с товаром")
@@ -50,5 +49,4 @@ public class OptionInnerFieldsTests extends TestBase {
             optionInnerFieldsPage.verifyThatMillingValueHasChanged(MILLING_SELECTED_VALUE);
         });
     }
-
 }
