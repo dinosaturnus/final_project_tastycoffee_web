@@ -117,7 +117,7 @@ clean ${TASK}
 ## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/final_project_tastycoffee_web/)
 Сборка с параметрами позволяет перед запуском изменить параметры для сборки (путем выбора из списка или прямым указанием значения).
 <p align="center">
-  <img src="images/readme_files/screenshots/JenkinsParameterizedJob.png" alt="Jenkins" width="800">
+  <img src="img/screenshots/JenkinsParameterizedJob.png" alt="Jenkins" width="800">
 </p>
 
 После выполнения сборки в блоке <code>История сборок</code> напротив номера сборки появится
@@ -127,17 +127,17 @@ clean ${TASK}
 ## Отчет в [Allure Report](https://jenkins.autotests.cloud/job/final_project_tastycoffee_web/44/allure/)
 ### Основной дашборд
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureReportOverview.png" alt="allure-report-overview" width="900">
+  <img src="img/screenshots/AllureReportOverview.png" alt="allure-report-overview" width="900">
 </p>
 
 ### Тесты
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureReportSuites.png" alt="allure-report-suites" width="900">
+  <img src="img/screenshots/AllureReportSuites.png" alt="allure-report-suites" width="900">
 </p>
 
 ### Графики
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureReportGraphs.png" alt="allure-report-graphs" width="900">
+  <img src="img/screenshots/AllureReportGraphs.png" alt="allure-report-graphs" width="900">
 </p>
 
 <a id="testops"></a>
@@ -146,43 +146,43 @@ clean ${TASK}
 ### Основной дашборд
 
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureTestOpsDashboards.png" alt="allure-testops-dashboard" width="900">
+  <img src="img/screenshots/AllureTestOpsDashboards.png" alt="allure-testops-dashboard" width="900">
 </p>
 
 ### Автоматизированные тест-кейсы
 
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureTestOpsTestCases.png" alt="allure-testops-testcase" width="900">
+  <img src="img/screenshots/AllureTestOpsTestCases.png" alt="allure-testops-testcase" width="900">
 </p>
 
 ### Пример мануального тест-кейса
 
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureTestOpsTestCaseManual.png" alt="allure-testops-testcase-manual" width="900">
+  <img src="img/screenshots/AllureTestOpsTestCaseManual.png" alt="allure-testops-testcase-manual" width="900">
 </p>
 
 ### Запуски сборок 
 
 <p align="center">
-  <img src="images/readme_files/screenshots/AllureTestOpsLaunches.png" alt="allure-testops-launches" width="900">
+  <img src="img/screenshots/AllureTestOpsLaunches.png" alt="allure-testops-launches" width="900">
 </p>
 
 <a id="jira"></a>
 ## Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-842"> Jira </a>
 <p align="center">
-<img src="images/readme_files/screenshots/Jira.png">
+<img src="img/screenshots/Jira.png">
 </p>
 
 <a id="telegram"></a>
 ## Уведомления в Telegram с использованием бота
 
 <p align="center">
-<img title="Telegram Notifications" src="images/readme_files/screenshots/Telegram.png" alt="telegram" width="900>
+<img title="Telegram Notifications" src="img/screenshots/Telegram.png" alt="telegram" width="900>
 </p>
 
 <a id="video"></a>
 ## Пример прогона теста в Selenoid
 
 <p align="center">
-  <img src="images/readme_files/video/video.mp4">
+  <img src="img/video/video.mp4">
 </p>
