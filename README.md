@@ -183,5 +183,5 @@ clean ${TASK}
 ## Пример прогона теста в Selenoid
 
 <p align="center">
-  <img src="img/video/video.mp4">
+  <img src="img/video/video.gif">
 </p>
