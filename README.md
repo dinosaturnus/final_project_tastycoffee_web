@@ -30,18 +30,18 @@
 ## Технологии и инструменты
 
 <div align="center">
-<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="images/logo/IntelliJ_IDEA.png" width="50"/></a>
-<a href="https://github.com/"><img alt="GitHub" height="50" src="images/readme_files/logo/GitHub.png" width="50"/></a>  
-<a href="https://www.java.com/"><img alt="Java" height="50" src="images/readme_files/logo/Java_logo.png" width="50"/></a>
-<a href="https://gradle.org/"><img alt="Gradle" height="50" src="images/readme_files/logo/Gradle.png" width="50"/></a>  
-<a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="images/readme_files/logo/JUnit5.png" width="50"/></a>
-<a href="https://selenide.org/"><img alt="Selenide" height="50" src="images/readme_files/logo/Selenide.png" width="50"/></a>
-<a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="images/readme_files/logo/Selenoid.png" width="50"/></a>
-<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="images/readme_files/logo/Jenkins.png" width="50"/></a>
-<a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="images/readme_files/logo/AllureReports.png" width="50"/></a>
-<a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="images/readme_files/logo/AllureTestOps.svg" width="50"/></a>
-<a href="https://www.atlassian.com/software/jira"><img alt="Jira" height="50" src="images/readme_files/logo/Jira.png" width="50"/></a>  
-<a href="https://telegram.org/"><img alt="Telegram" height="50" src="images/readme_files/logo/Telegram.png" width="50"/></a>
+<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="img/logo/IntelliJ_IDEA.png" width="50"/></a>
+<a href="https://github.com/"><img alt="GitHub" height="50" src="img/logo/GitHub.png" width="50"/></a>  
+<a href="https://www.java.com/"><img alt="Java" height="50" src="img/logo/Java_logo.png" width="50"/></a>
+<a href="https://gradle.org/"><img alt="Gradle" height="50" src="img/logo/Gradle.png" width="50"/></a>  
+<a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="img/logo/JUnit5.png" width="50"/></a>
+<a href="https://selenide.org/"><img alt="Selenide" height="50" src="img/logo/Selenide.png" width="50"/></a>
+<a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="img/logo/Selenoid.png" width="50"/></a>
+<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="img/logo/Jenkins.png" width="50"/></a>
+<a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="img/logo/AllureReports.png" width="50"/></a>
+<a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="img/logo/AllureTestOps.svg" width="50"/></a>
+<a href="https://www.atlassian.com/software/jira"><img alt="Jira" height="50" src="img/logo/Jira.png" width="50"/></a>  
+<a href="https://telegram.org/"><img alt="Telegram" height="50" src="img/logo/Telegram.png" width="50"/></a>
 </div>
 
 <code>Java</code> - основной язык проекта.\
@@ -55,7 +55,7 @@
 <code>Telegram Bot</code> — для уведомлений о результатах тестирования.\
 <code>Jira</code> — как инструмент управления проектом и таск-трекер.
 
-**Allure Report**, **AllureTestOps** и **Telegram Bot** используются для визуализации результатов тестирования.\
+**Allure Report**, **AllureTestOps** и **Telegram Bot** используются для визуализации результатов тестирования.
 
 Allure-отчет включает в себя:
 * шаги выполнения тестов;
