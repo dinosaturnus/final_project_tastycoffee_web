@@ -175,9 +175,8 @@ clean ${TASK}
 
 <a id="telegram"></a>
 ## Уведомления в Telegram с использованием бота
-
 <p align="center">
-<img title="Telegram Notifications" src="img/screenshots/Telegram.png" alt="telegram" width="900>
+<img title="Telegram Notifications" src="img/screenshots/Telegram.png" alt="telegram" width="900">
 </p>
 
 <a id="video"></a>
