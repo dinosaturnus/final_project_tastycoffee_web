@@ -1,4 +1,4 @@
-# Дипломный проект по тестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
+# Дипломный проект по UI-тестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
 
 ## Содержание:
 
@@ -30,7 +30,7 @@
 ## Технологии и инструменты
 
 <div align="center">
-<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="images/readme_files/logo/IntelliJ_IDEA.png" width="50"/></a>
+<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="images/logo/IntelliJ_IDEA.png" width="50"/></a>
 <a href="https://github.com/"><img alt="GitHub" height="50" src="images/readme_files/logo/GitHub.png" width="50"/></a>  
 <a href="https://www.java.com/"><img alt="Java" height="50" src="images/readme_files/logo/Java_logo.png" width="50"/></a>
 <a href="https://gradle.org/"><img alt="Gradle" height="50" src="images/readme_files/logo/Gradle.png" width="50"/></a>  
