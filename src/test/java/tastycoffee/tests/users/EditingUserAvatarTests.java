@@ -1,7 +1,6 @@
 package tastycoffee.tests.users;
 
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;

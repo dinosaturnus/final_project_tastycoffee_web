@@ -20,7 +20,7 @@ public class AuthorizationTests extends TestBase {
     @Epic("Личный кабинет")
     @Feature("Авторизация")
     @Story("Пользователь аутентифицирован")
-    @DisplayName("Ввод корректного логиня и пароля")
+    @DisplayName("Ввод корректного логина и пароля")
     @Description("При вводе корректного логина и пароля система аутентифицирует пользователя")
     @Tags({
             @Tag ("Smoke"),
