@@ -1,5 +1,6 @@
 package tastycoffee.tests.cart;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -32,7 +33,8 @@ public class EmptyingTheCardTests extends TestBase {
     @Epic("Действия с корзиной")
     @Feature("Удаление одного товара")
     @Story("Позитивный сценарий")
-    @DisplayName("Удаление одного товара из корзины через кнопку 'Удалить' в карточке товара")
+    @DisplayName("Удаление одного товара из корзины")
+    @Description("Товар удаляется из корзины после нажатия кнопки 'Удалить' в карточке товара")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
@@ -55,7 +57,8 @@ public class EmptyingTheCardTests extends TestBase {
     @Epic("Действия с корзиной")
     @Feature("Удаление всех товаров")
     @Story("Позитивный сценарий")
-    @DisplayName("Полное очищение корзины через кнопку 'Удалить все товары'")
+    @DisplayName("Удаление всех товаров из корзины")
+    @Description("Корзина очищается полностью после нажатия кнопки 'Удалить все товары'")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")

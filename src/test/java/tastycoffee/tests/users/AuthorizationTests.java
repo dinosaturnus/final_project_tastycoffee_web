@@ -1,6 +1,5 @@
 package tastycoffee.tests.users;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -20,7 +19,7 @@ public class AuthorizationTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Авторизация")
     @Story("Позитивный сценарий")
-    @DisplayName("Успешная аутентификация пользователя")
+    @DisplayName("Ввод валидного логиня и пароля")
     @Tags({
             @Tag ("Smoke"),
             @Tag ("Regress")
@@ -51,7 +50,7 @@ public class AuthorizationTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Авторизация")
     @Story("Негативные сценарии")
-    @DisplayName("Ввод неверного пароля при авторизации")
+    @DisplayName("Ввод невалидного пароля и валидного логина")
     @Tags({
             @Tag ("Regress")
     })
@@ -81,7 +80,7 @@ public class AuthorizationTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Авторизация")
     @Story("Негативные сценарии")
-    @DisplayName("Ввод неверного логина при авторизации")
+    @DisplayName("Ввод невалидного логина и валидного пароля")
     @Tags({
             @Tag ("Regress")
     })

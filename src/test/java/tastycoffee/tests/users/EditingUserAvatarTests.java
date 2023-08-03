@@ -44,7 +44,7 @@ public class EditingUserAvatarTests extends TestBase {
     @Epic("Действия с личным кабинетом пользователя")
     @Feature("Редактирование аватара")
     @Story("Позитивный сценарий")
-    @DisplayName("Редактирование аватара пользователя")
+    @DisplayName("Редактирование аватара пользователя.")
     @Tag("Regress")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void editingUserAvatarTest(String imagePath) {

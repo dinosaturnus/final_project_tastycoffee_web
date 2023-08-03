@@ -1,5 +1,6 @@
 package tastycoffee.tests.product;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -15,9 +16,11 @@ public class AddProductToTheCartTests extends TestBase {
     AddProductToTheCartPage addProductToTheCartPage = new AddProductToTheCartPage();
 
     @Epic("Действия с товаром")
-    @Feature("Добавление товара в корзину")
-    @Story("Позитивный сценарий")
-    @DisplayName("Появление информационного поп-апа при добавлении товара в корзину")
+    @Feature("Добавить товар в корзину")
+    @Story("Информационный поп-ап")
+    @DisplayName("Появление поп-апа")
+    @Description("После нажатия кнопки 'Купить' появляется информационный поп-ап с текстом 'Товар добавлен в корзину' " +
+            "и кнопками 'Перейти в корзину' и 'Продолжить покупки'" )
     @Tags({
             @Tag("Regress")
     })
@@ -37,9 +40,10 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Действия с товаром")
-    @Feature("Добавление товара в корзину")
-    @Story("Позитивный сценарий")
-    @DisplayName("Увеличение счетчика товаров в мини-корзине в шапке после добавления товара в корзину")
+    @Feature("Добавить товар в корзину")
+    @Story("Счетчик товаров в шапке")
+    @DisplayName("Увеличение значения")
+    @Description("После добавления товара в корзину счетчик товаров увеличивается на 1 единицу")
     @Tags({
             @Tag("Regress")
     })
@@ -63,9 +67,10 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Действия с товаром")
-    @Feature("Добавление товара в корзину")
-    @Story("Позитивный сценарий")
-    @DisplayName("Изменение текста кнопки 'Купить' на 'В корзине' после добавления товара в корзину")
+    @Feature("Добавить товар в корзину")
+    @Story("UI/UX кнопки 'Купить'")
+    @DisplayName("Изменение текста кнопки на 'В корзине'")
+    @Description("После добавления товара в корзину дефолтный текст кнопки 'Купить' меняется на 'В корзине'")
     @Tags({
             @Tag("Regress")
     })
@@ -89,9 +94,9 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Действия с товаром")
-    @Feature("Добавление товара в корзину")
-    @Story("Позитивный сценарий")
-    @DisplayName("Наличие товара на странице корзины после нажатия кнопки 'Купить'")
+    @Feature("Добавить товар в корзину")
+    @Story("Добавить товар кнопкой 'Купить'")
+    @DisplayName("После нажатия кнопки 'Купить' товар отображается в корзине")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
