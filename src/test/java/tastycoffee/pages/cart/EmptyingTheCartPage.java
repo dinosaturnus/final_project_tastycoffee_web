@@ -24,6 +24,7 @@ public class EmptyingTheCartPage extends TestBase {
     public EmptyingTheCartPage addProduct(String productName) {
         addProductToTheCartComponent.openProductPage(productName);
         addProductToTheCartComponent.addProductToTheCart();
+        addProductToTheCartComponent.verifyThatProductAddedToTheCart();
 
         return this;
     }
