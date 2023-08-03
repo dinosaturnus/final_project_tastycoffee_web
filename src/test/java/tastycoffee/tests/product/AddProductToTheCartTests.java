@@ -16,8 +16,8 @@ public class AddProductToTheCartTests extends TestBase {
     AddProductToTheCartPage addProductToTheCartPage = new AddProductToTheCartPage();
 
     @Epic("Товар")
-    @Feature("Добавление в корзину")
-    @Story("Информационный поп-ап")
+    @Feature("Кнопка 'Купить'")
+    @Story("Вызов информационного поп-апа")
     @DisplayName("Появление поп-апа")
     @Description("После нажатия кнопки 'Купить' появляется информационный поп-ап с текстом 'Товар добавлен в корзину' " +
             "и кнопками 'Перейти в корзину' и 'Продолжить покупки'" )
@@ -40,7 +40,7 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Товар")
-    @Feature("Добавление в корзину")
+    @Feature("Кнопка 'Купить'")
     @Story("Изменение счетчика товаров в шапке")
     @DisplayName("Увеличение значения")
     @Description("После добавления товара в корзину счетчик товаров увеличивается на 1 единицу")
@@ -67,7 +67,7 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Товар")
-    @Feature("Добавление в корзину")
+    @Feature("Кнопка 'Купить'")
     @Story("UI/UX кнопки 'Купить'")
     @DisplayName("Изменение текста кнопки на 'В корзине'")
     @Description("После добавления товара в корзину дефолтный текст кнопки 'Купить' меняется на 'В корзине'")
@@ -94,8 +94,8 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Epic("Товар")
-    @Feature("Добавление в корзину")
-    @Story("Добавление товара кнопкой 'Купить'")
+    @Feature("Кнопка 'Купить'")
+    @Story("Добавление товара в корзину")
     @DisplayName("Нажатие кнопки 'Купить' добавляет товар в корзину")
     @Description("Товар появляется на странице корзины после нажатия кнопки 'Купить'")
     @Tags({
