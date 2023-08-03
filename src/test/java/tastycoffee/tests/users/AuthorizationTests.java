@@ -22,7 +22,6 @@ public class AuthorizationTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Успешная аутентификация пользователя")
     @Tags({
-            @Tag ("Happy path"),
             @Tag ("Smoke"),
             @Tag ("Regress")
     })
@@ -54,8 +53,6 @@ public class AuthorizationTests extends TestBase {
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного пароля при авторизации")
     @Tags({
-            @Tag ("Negative"),
-            @Tag ("Smoke"),
             @Tag ("Regress")
     })
     @Test
@@ -86,8 +83,6 @@ public class AuthorizationTests extends TestBase {
     @Story("Негативные сценарии")
     @DisplayName("Ввод неверного логина при авторизации")
     @Tags({
-            @Tag ("Negative"),
-            @Tag ("Smoke"),
             @Tag ("Regress")
     })
     @Test

@@ -18,7 +18,6 @@ public class EditingUserDataTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Успешное редактирование данных пользователя (без логина и пароля)")
     @Tags({
-            @Tag("Happy path"),
             @Tag("Smoke"),
             @Tag ("Regress")
     })

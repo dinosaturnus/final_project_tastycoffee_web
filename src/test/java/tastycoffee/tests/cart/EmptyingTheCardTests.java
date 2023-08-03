@@ -34,8 +34,8 @@ public class EmptyingTheCardTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Удаление одного товара из корзины через кнопку 'Удалить' в карточке товара")
     @Tags({
-            @Tag("Happy path"),
             @Tag("Smoke"),
+            @Tag("Regress")
     })
     @Test
     void deleteOneItemsFromTheCartTest() {
@@ -57,8 +57,8 @@ public class EmptyingTheCardTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Полное очищение корзины через кнопку 'Удалить все товары'")
     @Tags({
-            @Tag("Happy path"),
             @Tag("Smoke"),
+            @Tag("Regress")
     })
     @Test
     void deleteAllItemsFromTheCartTest() {

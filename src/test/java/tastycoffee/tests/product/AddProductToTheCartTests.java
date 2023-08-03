@@ -19,8 +19,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Появление информационного поп-апа при добавлении товара в корзину")
     @Tags({
-            @Tag("Happy path"),
-            @Tag("Smoke")
+            @Tag("Regress")
     })
     @Test
     void popUpAppearsAfterAddingItemToTheCartTest() {
@@ -42,8 +41,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Увеличение счетчика товаров в мини-корзине в шапке после добавления товара в корзину")
     @Tags({
-            @Tag("Happy path"),
-            @Tag("Smoke")
+            @Tag("Regress")
     })
     @Test
     void cartCounterIncrementedAfterAddingProductTest() {
@@ -69,8 +67,7 @@ public class AddProductToTheCartTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Изменение текста кнопки 'Купить' на 'В корзине' после добавления товара в корзину")
     @Tags({
-            @Tag("Happy path"),
-            @Tag("Smoke")
+            @Tag("Regress")
     })
     @Test
     void buyButtonTextChangesAfterAddingProductTheCartTest() {
@@ -96,8 +93,8 @@ public class AddProductToTheCartTests extends TestBase {
     @Story("Позитивный сценарий")
     @DisplayName("Наличие товара на странице корзины после нажатия кнопки 'Купить'")
     @Tags({
-            @Tag("Happy path"),
-            @Tag("Smoke")
+            @Tag("Smoke"),
+            @Tag("Regress")
     })
     @Test
     void checkingThatTheProductAppearsInTheCartAfterClickByButtonTest() {

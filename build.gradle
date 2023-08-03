@@ -71,9 +71,3 @@ task regress_test(type: Test) {
         includeTags("Regress")
     }
 }
-task parameterized_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("Parameterized")
-    }
-
-}
