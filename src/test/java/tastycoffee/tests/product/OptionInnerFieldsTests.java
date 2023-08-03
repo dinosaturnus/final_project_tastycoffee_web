@@ -1,5 +1,6 @@
 package tastycoffee.tests.product;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -16,11 +17,12 @@ import static tastycoffee.data.TestData.*;
 public class OptionInnerFieldsTests extends TestBase {
     OptionInnerFieldsPage optionInnerFieldsPage = new OptionInnerFieldsPage();
 
-    @Epic("Действия с товаром")
-    @Feature("Выбор помола")
-    @Story("Позитивный сценарий")
-    @DisplayName("Появление выпадающего меню с вариантами выбора помола. " +
-            "Изменение дефолтного типа помола при выборе варианта из меню.")
+    @Epic("Товар")
+    @Feature("Тип помола")
+    @Story("Выбор помола")
+    @DisplayName("Выбор помола через выпадающее меню")
+    @Description("Дефолтное значение помола 'В зернах'. При нажатии на тип помола открывается меню с вариантами выбора." +
+            "После выбора варианта в блоке помола сохраняется выбранное значение, меню закрывается.")
     @Tags({
             @Tag("Regress")
     })

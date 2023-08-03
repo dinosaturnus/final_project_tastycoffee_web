@@ -1,5 +1,6 @@
 package tastycoffee.tests.users;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -13,10 +14,11 @@ import static tastycoffee.data.TestData.*;
 public class EditingUserDataTests extends TestBase {
     EditingUserDataPage editingUserDataPage = new EditingUserDataPage();
 
-    @Epic("Действия с личным кабинетом пользователя")
-    @Feature("Редактирование личной информации")
-    @Story("Позитивный сценарий")
-    @DisplayName("Редактирование данных пользователя валидными значениями (без логина и пароля)")
+    @Epic("Личный кабинет")
+    @Feature("Личные данные")
+    @Story("Редактирование личных данных")
+    @DisplayName("Валидные значения: имя и фамилия, номер телефона, наименование организации, юридический адрес, ИНН, КПП")
+    @Description("Редактирование данных пользователя валидными значениями. Без пароля и логина.")
     @Tags({
             @Tag("Smoke"),
             @Tag ("Regress")

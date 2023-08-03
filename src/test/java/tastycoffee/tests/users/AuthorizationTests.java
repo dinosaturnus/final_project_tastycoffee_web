@@ -1,5 +1,6 @@
 package tastycoffee.tests.users;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -16,10 +17,11 @@ import static tastycoffee.data.TestData.*;
 public class AuthorizationTests extends TestBase {
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
-    @Epic("Действия с личным кабинетом пользователя")
+    @Epic("Личный кабинет")
     @Feature("Авторизация")
-    @Story("Позитивный сценарий")
-    @DisplayName("Ввод валидного логиня и пароля")
+    @Story("Пользователь аутентифицирован")
+    @DisplayName("Ввод корректного логиня и пароля")
+    @Description("При вводе корректного логина и пароля система аутентифицирует пользователя")
     @Tags({
             @Tag ("Smoke"),
             @Tag ("Regress")
@@ -47,10 +49,12 @@ public class AuthorizationTests extends TestBase {
         });
     }
 
-    @Epic("Действия с личным кабинетом пользователя")
+    @Epic("Личный кабинет")
     @Feature("Авторизация")
-    @Story("Негативные сценарии")
-    @DisplayName("Ввод невалидного пароля и валидного логина")
+    @Story("Пользователю отказано в аутентификации")
+    @DisplayName("Ввод некорректного пароля и корректного логина")
+    @Description("При вводе некорректного пароля пользователю отказано в аутентификации, " +
+            "появляется сообщение об ошибке")
     @Tags({
             @Tag ("Regress")
     })
@@ -72,15 +76,17 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверить наличие ошибки авторизации", () -> {
+        step("Проверить наличие сообщения об ошибке авторизации", () -> {
             authorizationPage.verifyErrorAuthorization();
         });
     }
 
-    @Epic("Действия с личным кабинетом пользователя")
+    @Epic("Личный кабинет")
     @Feature("Авторизация")
-    @Story("Негативные сценарии")
-    @DisplayName("Ввод невалидного логина и валидного пароля")
+    @Story("Пользователю отказано в аутентификации")
+    @DisplayName("Ввод некорректного логина и корректного пароля")
+    @Description("При вводе некорректного логина пользователю отказано в аутентификации, " +
+            "появляется сообщение об ошибке")
     @Tags({
             @Tag ("Regress")
     })
@@ -102,7 +108,7 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.clickSubmitButton();
         });
 
-        step("Проверить наличие ошибки авторизации", () -> {
+        step("Проверить наличие сообщения об ошибке авторизации", () -> {
             authorizationPage.verifyErrorAuthorization();
         });
     }

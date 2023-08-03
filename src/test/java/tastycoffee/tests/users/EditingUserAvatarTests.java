@@ -1,6 +1,7 @@
 package tastycoffee.tests.users;
 
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -41,10 +42,9 @@ public class EditingUserAvatarTests extends TestBase {
 
     @CsvFileSource(resources = "/avatars_path.csv")
 
-    @Epic("Действия с личным кабинетом пользователя")
-    @Feature("Редактирование аватара")
-    @Story("Позитивный сценарий")
-    @DisplayName("Редактирование аватара пользователя.")
+    @Epic("Личный кабинет")
+    @Feature("Личные данные")
+    @Story("Редактирование аватара")
     @Tag("Regress")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void editingUserAvatarTest(String imagePath) {
