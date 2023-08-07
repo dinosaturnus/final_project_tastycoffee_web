@@ -181,7 +181,7 @@ clean ${TASK}
 </p>
 
 <a id="video"></a>
-## Пример прогона теста в Selenoid
+## Пример прогона теста в Selenoid. Параметризованный тест на редактирование аватара пользователя.
 
 <p align="center">
   <img src="img/video/VideoSelenoid.gif">
