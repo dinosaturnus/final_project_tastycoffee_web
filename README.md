@@ -118,7 +118,7 @@ clean ${TASK}
 ## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/final_project_tastycoffee_web/)
 Сборка с параметрами позволяет перед запуском изменить параметры для сборки (путем выбора из списка или прямым указанием значения).
 <p align="center">
-  <img src="img/screenshots/JenkinsParameterizedJob.png" alt="Jenkins" width="800">
+  <img src="img/screenshots/JenkinsParameterizedJob.png" alt="Jenkins" width="900">
 </p>
 
 После выполнения сборки в блоке <code>История сборок</code> напротив номера сборки появится
@@ -177,11 +177,11 @@ clean ${TASK}
 <a id="telegram"></a>
 ## Уведомления в Telegram с использованием бота
 <p align="center">
-<img title="Telegram Notifications" src="img/screenshots/Telegram.png" alt="telegram" width="600">
+<img title="Telegram Notifications" src="img/screenshots/Telegram.png" alt="telegram" width="450">
 </p>
 
 <a id="video"></a>
-## Пример прогона теста в Selenoid
+## Пример прогона теста в Selenoid. Параметризованный тест на редактирование аватара пользователя
 
 <p align="center">
   <img src="img/video/VideoSelenoid.gif">
