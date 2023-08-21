@@ -1,10 +1,15 @@
 package tastycoffee.data;
 
+import tastycoffee.config.AuthConfig;
+
+import static org.aeonbits.owner.ConfigFactory.create;
 import static tastycoffee.utils.RandomUtils.*;
 
 public class TestData {
-    final public static String EMAIL = "alinatest@test.ru",
-            PASSWORD = "123456";
+    private static AuthConfig authConfig = create(AuthConfig.class, System.getProperties());
+
+    final public static String EMAIL = authConfig.email(),
+            PASSWORD = authConfig.password();
 
     public static String fullName = getRandomFullName(),
             phoneNumber = getRandomPhoneNumber(),

@@ -11,13 +11,20 @@ import tastycoffee.tests.TestBase;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
+@Epic("Корзина")
+@Feature("Очищение корзины")
 public class EmptyingTheCardTests extends TestBase {
     EmptyingTheCartPage emptyingTheCartPage = new EmptyingTheCartPage();
 
-    @DisplayName("Предварительные шаги: добавить товары в корзину, " +
-            "открыть корзину и проверить наличие добавленных товаров")
-    @BeforeEach
-    public void addProductsToTheCartPrecondition() {
+    @Test
+    @Story("Удаление одного товара")
+    @Description("Товар удаляется из корзины после нажатия кнопки 'Удалить' в карточке товара")
+    @Tags({
+            @Tag("Smoke"),
+            @Tag("Regress")
+    })
+    @DisplayName("Удаление через карточку товара")
+    void deleteOneItemsFromTheCartTest() {
         step("Добавить товары в корзину", () -> {
             emptyingTheCartPage.addProduct(NUTTY_URL)
                     .addProduct(CANDY_URL);
@@ -28,19 +35,7 @@ public class EmptyingTheCardTests extends TestBase {
                     .checkProductInTheCart(NUTTY_NAME)
                     .checkProductInTheCart(CANDY_NAME);
         });
-    }
 
-    @Epic("Корзина")
-    @Feature("Очищение корзины")
-    @Story("Удаление одного товара")
-    @DisplayName("Удаление через карточку товара")
-    @Description("Товар удаляется из корзины после нажатия кнопки 'Удалить' в карточке товара")
-    @Tags({
-            @Tag("Smoke"),
-            @Tag("Regress")
-    })
-    @Test
-    void deleteOneItemsFromTheCartTest() {
         step("Удалить один товар", () -> {
             emptyingTheCartPage.deleteOneItem(NUTTY_NAME);
         });
@@ -54,17 +49,26 @@ public class EmptyingTheCardTests extends TestBase {
         });
     }
 
-    @Epic("Корзина")
-    @Feature("Очищение корзины")
+    @Test
     @Story("Удаление всех товаров")
-    @DisplayName("Удаление через кнопку 'Удалить все товары'")
     @Description("Корзина очищается полностью после нажатия кнопки 'Удалить все товары'")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
-    @Test
+    @DisplayName("Удаление через кнопку 'Удалить все товары'")
     void deleteAllItemsFromTheCartTest() {
+        step("Добавить товары в корзину", () -> {
+            emptyingTheCartPage.addProduct(NUTTY_URL)
+                    .addProduct(CANDY_URL);
+        });
+
+        step("Открыть корзину и проверить наличие добавленных товаров", () -> {
+            emptyingTheCartPage.openCart()
+                    .checkProductInTheCart(NUTTY_NAME)
+                    .checkProductInTheCart(CANDY_NAME);
+        });
+
         step("Очистить корзину через кнопку 'Удалить все товары'", () -> {
             emptyingTheCartPage.deleteAllItems();
         });

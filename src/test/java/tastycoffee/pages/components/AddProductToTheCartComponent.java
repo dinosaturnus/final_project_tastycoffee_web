@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class AddProductToTheCartComponent {
-
-    SelenideElement buyButton = $(".buyGoods"),
+    private SelenideElement buyButton = $(".buyGoods"),
             modalItemAddToTheCart = $("[data-modal-name='thanks']");
 
     public void openProductPage(String productURL) {

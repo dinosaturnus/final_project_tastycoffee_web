@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class AddProductToTheCartPage {
-
-    SelenideElement modalItemAddToTheCart = $("[data-modal-name='thanks']"),
+    private SelenideElement modalItemAddToTheCart = $("[data-modal-name='thanks']"),
             headerNumberItemsInTheCart = $("#header_cart_text"),
             buyButton = $(".buyGoods"),
             buyButtonAdded = $(".blackBtn.added"),
@@ -24,6 +23,7 @@ public class AddProductToTheCartPage {
 
     public AddProductToTheCartPage addProductToTheCart() {
         buyButton.click();
+        modalItemAddToTheCart.shouldBe(appear);
 
         return this;
     }
@@ -75,5 +75,4 @@ public class AddProductToTheCartPage {
 
         return this;
     }
-
 }

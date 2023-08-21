@@ -9,11 +9,10 @@ import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.*;
 
 public class EditingUserDataPage extends TestBase {
-
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
     UserAvatarComponent userAvatarComponent = new UserAvatarComponent();
 
-    SelenideElement fullNameInput = $(".full_name"),
+    private SelenideElement fullNameInput = $(".full_name"),
             phoneNumberInput = $(".input-wrap .phone-mask"),
             companyNameInput = $(".input-wrap [name='legal_name']"),
             companyAddressInput = $(".input-wrap [name='legal_address']"),

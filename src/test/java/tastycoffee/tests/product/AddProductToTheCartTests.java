@@ -12,19 +12,17 @@ import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.CANDY_NAME;
 import static tastycoffee.data.TestData.CANDY_URL;
 
+@Epic("Товар")
+@Feature("Кнопка 'Купить'")
 public class AddProductToTheCartTests extends TestBase {
     AddProductToTheCartPage addProductToTheCartPage = new AddProductToTheCartPage();
 
-    @Epic("Товар")
-    @Feature("Кнопка 'Купить'")
+    @Test
+    @Tag("Regress")
     @Story("Вызов информационного поп-апа")
-    @DisplayName("Появление поп-апа")
     @Description("После нажатия кнопки 'Купить' появляется информационный поп-ап с текстом 'Товар добавлен в корзину' " +
             "и кнопками 'Перейти в корзину' и 'Продолжить покупки'" )
-    @Tags({
-            @Tag("Regress")
-    })
-    @Test
+    @DisplayName("Появление поп-апа")
     void popUpAppearsAfterAddingItemToTheCartTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
@@ -39,15 +37,11 @@ public class AddProductToTheCartTests extends TestBase {
         });
     }
 
-    @Epic("Товар")
-    @Feature("Кнопка 'Купить'")
-    @Story("Изменение счетчика товаров в шапке")
-    @DisplayName("Увеличение значения")
-    @Description("После добавления товара в корзину счетчик товаров увеличивается на 1 единицу")
-    @Tags({
-            @Tag("Regress")
-    })
     @Test
+    @Story("Изменение счетчика товаров в шапке")
+    @Description("После добавления товара в корзину счетчик товаров увеличивается на 1 единицу")
+    @Tag("Regress")
+    @DisplayName("Увеличение значения")
     void cartCounterIncrementedAfterAddingProductTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
@@ -66,15 +60,11 @@ public class AddProductToTheCartTests extends TestBase {
         });
     }
 
-    @Epic("Товар")
-    @Feature("Кнопка 'Купить'")
-    @Story("UI/UX кнопки 'Купить'")
-    @DisplayName("Изменение текста кнопки на 'В корзине'")
-    @Description("После добавления товара в корзину дефолтный текст кнопки 'Купить' меняется на 'В корзине'")
-    @Tags({
-            @Tag("Regress")
-    })
     @Test
+    @Story("UI/UX кнопки 'Купить'")
+    @Description("После добавления товара в корзину дефолтный текст кнопки 'Купить' меняется на 'В корзине'")
+    @Tag("Regress")
+    @DisplayName("Изменение текста кнопки на 'В корзине'")
     void buyButtonTextChangesAfterAddingProductTheCartTest() {
         step("Открыть страницу товара", () -> {
             addProductToTheCartPage.openProductPage(CANDY_URL);
@@ -93,16 +83,14 @@ public class AddProductToTheCartTests extends TestBase {
         });
     }
 
-    @Epic("Товар")
-    @Feature("Кнопка 'Купить'")
+    @Test
     @Story("Добавление товара в корзину")
-    @DisplayName("Нажатие кнопки 'Купить' добавляет товар в корзину")
     @Description("Товар появляется на странице корзины после нажатия кнопки 'Купить'")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
-    @Test
+    @DisplayName("Нажатие кнопки 'Купить' добавляет товар в корзину")
     void checkingThatTheProductAppearsInTheCartAfterClickByButtonTest() {
         step("Открыть страницу корзины", () -> {
             addProductToTheCartPage.openCartPage();

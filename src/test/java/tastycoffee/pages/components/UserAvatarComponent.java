@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class UserAvatarComponent {
-
-    SelenideElement editAvatarButton = $(".userAvatar-buttons"),
+    private SelenideElement editAvatarButton = $(".userAvatar-buttons"),
     uploadImageButton = $("#upload-profile-file"),
     saveImageButton = $("#upload-avatar-result"),
     previewImage = $(".userAvatar-image"),

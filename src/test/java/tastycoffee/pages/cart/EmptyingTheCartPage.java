@@ -12,14 +12,13 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class EmptyingTheCartPage extends TestBase {
-
     AddProductToTheCartComponent addProductToTheCartComponent = new AddProductToTheCartComponent();
 
-    SelenideElement productCard = $(".goods-item"),
+    private SelenideElement productCard = $(".goods-item"),
             deleteAllItemsButton = $(".goodsRemove"),
             cartHeadlineText = $(".content");
 
-    ElementsCollection listOfProductsInTheCart = $$("#basket-products");
+    private ElementsCollection listOfProductsInTheCart = $$("#basket-products");
 
     public EmptyingTheCartPage addProduct(String productName) {
         addProductToTheCartComponent.openProductPage(productName);

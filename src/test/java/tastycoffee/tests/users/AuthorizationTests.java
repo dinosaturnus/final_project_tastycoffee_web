@@ -14,19 +14,19 @@ import tastycoffee.tests.TestBase;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
+@Epic("Личный кабинет")
+@Feature("Авторизация")
 public class AuthorizationTests extends TestBase {
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
-    @Epic("Личный кабинет")
-    @Feature("Авторизация")
+    @Test
     @Story("Пользователь аутентифицирован")
-    @DisplayName("Ввод корректного логина и пароля")
     @Description("При вводе корректного логина и пароля система аутентифицирует пользователя")
     @Tags({
-            @Tag ("Smoke"),
-            @Tag ("Regress")
+            @Tag("Smoke"),
+            @Tag("Regress")
     })
-    @Test
+    @DisplayName("Ввод корректного логина и пароля")
     void authorizationWithValidCredentialsTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
@@ -49,16 +49,12 @@ public class AuthorizationTests extends TestBase {
         });
     }
 
-    @Epic("Личный кабинет")
-    @Feature("Авторизация")
+    @Test
     @Story("Пользователю отказано в аутентификации")
-    @DisplayName("Ввод некорректного пароля и корректного логина")
     @Description("При вводе некорректного пароля пользователю отказано в аутентификации, " +
             "появляется сообщение об ошибке")
-    @Tags({
-            @Tag ("Regress")
-    })
-    @Test
+    @Tag("Regress")
+    @DisplayName("Ввод некорректного пароля и корректного логина")
     void invalidPasswordAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();
@@ -81,16 +77,12 @@ public class AuthorizationTests extends TestBase {
         });
     }
 
-    @Epic("Личный кабинет")
-    @Feature("Авторизация")
+    @Test
     @Story("Пользователю отказано в аутентификации")
-    @DisplayName("Ввод некорректного логина и корректного пароля")
     @Description("При вводе некорректного логина пользователю отказано в аутентификации, " +
             "появляется сообщение об ошибке")
-    @Tags({
-            @Tag ("Regress")
-    })
-    @Test
+    @Tag("Regress")
+    @DisplayName("Ввод некорректного логина и корректного пароля")
     void invalidEmailAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {
             authorizationPage.openAuthorizationPage();

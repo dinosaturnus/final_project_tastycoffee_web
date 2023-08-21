@@ -6,7 +6,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import tastycoffee.pages.product.OptionInnerFieldsPage;
 import tastycoffee.tests.TestBase;
@@ -14,19 +13,17 @@ import tastycoffee.tests.TestBase;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
+@Epic("Товар")
+@Feature("Тип помола")
 public class OptionInnerFieldsTests extends TestBase {
     OptionInnerFieldsPage optionInnerFieldsPage = new OptionInnerFieldsPage();
 
-    @Epic("Товар")
-    @Feature("Тип помола")
+    @Test
     @Story("Выбор помола")
-    @DisplayName("Выбор помола через выпадающее меню")
     @Description("Дефолтное значение помола 'В зернах'. При нажатии на тип помола открывается меню с вариантами выбора." +
             "После выбора варианта в блоке помола сохраняется выбранное значение, меню закрывается.")
-    @Tags({
-            @Tag("Regress")
-    })
-    @Test
+    @Tag("Regress")
+    @DisplayName("Выбор помола через выпадающее меню")
     void openMillingDropdownMenuAndSelectedOptionTest() {
         step("Открыть страницу товара", () -> {
             optionInnerFieldsPage.openProductPage(CANDY_URL);

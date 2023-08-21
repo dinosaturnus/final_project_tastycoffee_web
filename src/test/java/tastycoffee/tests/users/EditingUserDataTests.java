@@ -5,25 +5,28 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
+import tastycoffee.data.TestData;
 import tastycoffee.pages.users.EditingUserDataPage;
 import tastycoffee.tests.TestBase;
+import tastycoffee.utils.RandomUtils;
 
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
+@Epic("Личный кабинет")
+@Feature("Личные данные")
 public class EditingUserDataTests extends TestBase {
     EditingUserDataPage editingUserDataPage = new EditingUserDataPage();
 
-    @Epic("Личный кабинет")
-    @Feature("Личные данные")
+    @Test
     @Story("Редактирование личных данных")
-    @DisplayName("Валидные значения: имя и фамилия, номер телефона, наименование организации, юридический адрес, ИНН, КПП")
     @Description("Редактирование данных пользователя валидными значениями. Без пароля и логина.")
     @Tags({
             @Tag("Smoke"),
             @Tag ("Regress")
     })
-    @Test
+    @DisplayName("Валидные значения: имя и фамилия, номер телефона, " +
+            "наименование организации, юридический адрес, ИНН, КПП")
     void userDataEditingTest() {
         step("Открыть страницу авторизации и авторизоваться", () -> {
             editingUserDataPage.authorizationUser(EMAIL, PASSWORD);

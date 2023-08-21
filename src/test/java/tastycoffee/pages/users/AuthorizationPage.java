@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationPage extends TestBase {
-
-    SelenideElement emailInput = $("#login_email"),
+    private SelenideElement emailInput = $("#login_email"),
             passwordInput = $("#login_password"),
             submitButton = $(".ib3 input.blackBtn"),
             goOutButton = $(".go-out"),
@@ -49,5 +48,4 @@ public class AuthorizationPage extends TestBase {
 
         return this;
     }
-
 }

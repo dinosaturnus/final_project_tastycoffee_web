@@ -13,8 +13,19 @@ import tastycoffee.tests.TestBase;
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
 
+@Epic("Личный кабинет")
+@Feature("Личные данные")
 public class EditingUserAvatarTests extends TestBase {
-    static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
+     static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
+
+    @DisplayName("Очистка куков после всех циклов теста для деавторизации пользователя - " +
+            "необходимо при запуске всего скоупа тестов проекта, иначе последующие тесты падают")
+    @AfterAll
+    static void clearBrowserCookies() {
+        step("Очистка куков и деавторизация", () -> {
+            Selenide.clearBrowserCookies();
+        });
+    }
 
     @DisplayName("Предварительные шаги: авторизация под пользователем" +
             "и переход на страницу личного кабинета")
@@ -29,23 +40,11 @@ public class EditingUserAvatarTests extends TestBase {
         });
     }
 
-
-    @DisplayName("Очистка куков после всех циклов теста для деавторизации пользователя - " +
-            "необходимо при запуске всего скоупа тестов проекта, иначе последующие тесты падают")
-    @AfterAll
-    static void clearBrowserCookies() {
-        step("Очистка куков и деавторизация", () -> {
-            Selenide.clearBrowserCookies();
-        });
-    }
-
     @CsvFileSource(resources = "/avatars_path.csv")
 
-    @Epic("Личный кабинет")
-    @Feature("Личные данные")
+    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     @Story("Редактирование аватара")
     @Tag("Regress")
-    @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     void editingUserAvatarTest(String imagePath) {
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()

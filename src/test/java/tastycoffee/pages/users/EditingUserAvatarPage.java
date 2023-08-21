@@ -10,10 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class EditingUserAvatarPage extends TestBase {
-
     AuthorizationComponent authorizationComponent = new AuthorizationComponent();
 
-    SelenideElement editAvatarButton = $(".userAvatar-buttons"),
+    private SelenideElement editAvatarButton = $(".userAvatar-buttons"),
             uploadImageButton = $("#upload-profile-file"),
             saveImageButton = $("#upload-avatar-result"),
             previewImage = $(".userAvatar-image"),
