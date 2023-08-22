@@ -1,10 +1,11 @@
-# Дипломный проект по UI-тестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
+# Дипломный проект по UI-автотестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
 
 ## Содержание:
 
 * <a href="#annotation">Описание</a>
 * <a href="#tools">Технологии и инструменты</a>
 * <a href="#cases">Тест кейсы</a>
+* <a href="#properties">Работа с properties-файлами</a>
 * <a href="#console">Запуск тестов из терминала</a>
 * <a href="#jenkins">Запуск тестов в Jenkins</a>
 * <a href="#allure">Отчеты в Allure</a>
@@ -81,38 +82,50 @@ Allure-отчет включает в себя:
 А также следующие ручные кейсы:
 - Добавление товара в избранное
 
+<a id="properties"></a>
+## Properties-файлы
+Для запуска тестов на локальной машине необходимо создать в папке resources -> config следующие файлы:
+- <code>auth.properties</code> - файл с кредами пользователя сайта tastycoffe.ru. Креды понадобятся при запуске тестов на авторизацию, редактирование профиля и редактирование аватара пользователя.\
+В файле необходимо указать следующие данные в формате:
+```bash
+email=ваш email-адрес
+password=ваш пароль
+```
+- <code>selenoid.properties</code> - файл с доступами к удаленному Selenoid-контейнеру. Он понадобится для запуска тестов на удаленном сервере Selenoid из терминала вашей IDEA. 
+В файле необходимо указать следующие данные в формате:
+```bash
+url=адрес вашего Selenoid
+login=логин от вашего Selenoid
+password=пароль от вашего Selenoid
+```
+
 <a id="console"></a>
 ##  Запуск тестов из терминала
+Для запуска тестов из терминала используйте следующие команды:
 ### Локальный запуск тестов
-
+Все тесты запустятся локально на вашей машине с дефолтными настройками файла WebDriverConfig.
 ```bash
-gradle clean test
+./gradlew clean test
 ```
 
 ### Удаленный запуск тестов
-
+Тесты запустятся на удаленном сервере Selenoid.
 ```bash
-clean ${TASK}
--Dbrowser=${BROWSER}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserVersion=${BROWSER_VERSION}
--DremoteSelenoidUrl=${REMOTE_SELENOID_URL}
--DbaseUrl=${BASE_URL}
+./gradlew clean test -DisRemote=true
 ```
 
-### Для запуска удаленных тестов необходимо передать значение:
+### Вы можете корректировать параметры запуска тестов, редактируя и передавая в консоль следующие конфигурации:
 
-> `${TASK}` - таска для запуска тестов по определенному тегу.
+> `-Dbrowser=` - наименование браузера (_по умолчанию - <code>chrome</code>_).
 >
-> `${BROWSER}` - наименование браузера (_по умолчанию - <code>chrome</code>_).
+> `-DbrowserSize=` - размер окна браузера (_по умолчанию - <code>1980x1080</code>_).
 >
-> `${BROWSER_SIZE}` - размер окна браузера (_по умолчанию - <code>1980x1080</code>_).
->
-> `${BROWSER_VERSION}` - номер версии браузера (_по умолчанию - <code>100.0</code>_).
->
-> `${REMOTE_SELENOID_URL}` - адрес удаленного сервера Selenoid.
->
-> `${BASE_URL}` - URL-адрес сайта онлайн-магазина.
+> `-Dversion` - номер версии браузера (_по умолчанию - <code>115.0</code>_).
+
+Например:
+```bash
+./gradlew clean test -Dbrowser=FIREFOX -DbrowserSize=1240x960 -Dversion=116
+```
 
 <a id="jenkins"></a>
 ## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/final_project_tastycoffee_web/)
