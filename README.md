@@ -34,7 +34,9 @@
 
 <a id="tools"></a>
 ## Технологии и инструменты
-
+| IntelliJ IDEA | Java | Rest Assured | Allure Report |  Allure TestOps | Gradle | JUnit5 | GitHub | Jenkins| Telegram | Jira |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+|
 <div align="center">
 <a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="img/logo/IntelliJ_IDEA.png" width="50"/></a>
 <a href="https://github.com/"><img alt="GitHub" height="50" src="img/logo/GitHub.png" width="50"/></a>  
