@@ -1,4 +1,4 @@
-# Дипломный проект по UI-автотестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
+# Дипломный проект по автоматизации UI-тестирования интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
 
 <div align="center">
   <a href="https://shop.tastycoffee.ru/"><img alt="Tasty Coffee" src="img/logo/TastyCoffeeLogo.jpg"/></a>
