@@ -1,8 +1,8 @@
 # Дипломный проект по UI-автотестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
 
-<p align="center">
-  <img src="img/logo/TastyCoffeeLogo.jpg" alt="tasty-coffee" width="30%">
-</p>
+<div align="center">
+  <a href="https://shop.tastycoffee.ru/"><img alt="Tasty Coffee" src="img/logo/TastyCoffeeLogo.jpg"/></a>
+</div>
 
 ## Содержание:
 
