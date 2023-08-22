@@ -20,6 +20,7 @@ public class TestBase {
 
     private static WebDriverConfig webDriverConfig = create(WebDriverConfig.class, System.getProperties());
     private static SelenoidConfig selenoidConfig = create(SelenoidConfig.class, System.getProperties());
+    protected static boolean isRemote = Boolean.getBoolean("isRemote");
 
     @BeforeAll
     static void beforeAll() {
@@ -28,8 +29,9 @@ public class TestBase {
         Configuration.browserVersion = webDriverConfig.browserVersion();
         Configuration.browserSize = webDriverConfig.browserSize();
 
-        if (selenoidConfig.url() != null && selenoidConfig.password() != null && selenoidConfig.login() != null) {
-            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", selenoidConfig.login(), selenoidConfig.password(), selenoidConfig.url());
+        if (isRemote) {
+            Configuration.remote = String.format("https://%s:%s@%s/wd/hub",
+                    selenoidConfig.login(), selenoidConfig.password(), selenoidConfig.url());
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -54,6 +56,8 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
+        if (isRemote) {
+            Attach.addVideo();
+        }
     }
 }

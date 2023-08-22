@@ -17,12 +17,12 @@ public class EmptyingTheCardTests extends TestBase {
     EmptyingTheCartPage emptyingTheCartPage = new EmptyingTheCartPage();
 
     @Test
-    @Story("Удаление одного товара")
-    @Description("Товар удаляется из корзины после нажатия кнопки 'Удалить' в карточке товара")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
+    @Story("Удаление одного товара")
+    @Description("Товар удаляется из корзины после нажатия кнопки 'Удалить' в карточке товара")
     @DisplayName("Удаление через карточку товара")
     void deleteOneItemsFromTheCartTest() {
         step("Добавить товары в корзину", () -> {
@@ -50,12 +50,12 @@ public class EmptyingTheCardTests extends TestBase {
     }
 
     @Test
-    @Story("Удаление всех товаров")
-    @Description("Корзина очищается полностью после нажатия кнопки 'Удалить все товары'")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
+    @Story("Удаление всех товаров")
+    @Description("Корзина очищается полностью после нажатия кнопки 'Удалить все товары'")
     @DisplayName("Удаление через кнопку 'Удалить все товары'")
     void deleteAllItemsFromTheCartTest() {
         step("Добавить товары в корзину", () -> {

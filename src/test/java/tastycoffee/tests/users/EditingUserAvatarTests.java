@@ -16,7 +16,7 @@ import static tastycoffee.data.TestData.*;
 @Epic("Личный кабинет")
 @Feature("Личные данные")
 public class EditingUserAvatarTests extends TestBase {
-     static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
+    static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
 
     @DisplayName("Очистка куков после всех циклов теста для деавторизации пользователя - " +
             "необходимо при запуске всего скоупа тестов проекта, иначе последующие тесты падают")
@@ -42,9 +42,9 @@ public class EditingUserAvatarTests extends TestBase {
 
     @CsvFileSource(resources = "/avatars_path.csv")
 
+    @Tag("Regress")
     @ParameterizedTest(name = "Загрузка изображений с расширениями .jpg, .webp и .png при изменении аватара")
     @Story("Редактирование аватара")
-    @Tag("Regress")
     void editingUserAvatarTest(String imagePath) {
         step("Выбрать и загрузить новый аватар", () -> {
             editingUserAvatarPage.clickEditAvatarButton()

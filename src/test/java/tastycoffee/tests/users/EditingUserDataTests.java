@@ -8,7 +8,6 @@ import org.junit.jupiter.api.*;
 import tastycoffee.data.TestData;
 import tastycoffee.pages.users.EditingUserDataPage;
 import tastycoffee.tests.TestBase;
-import tastycoffee.utils.RandomUtils;
 
 import static io.qameta.allure.Allure.step;
 import static tastycoffee.data.TestData.*;
@@ -19,12 +18,12 @@ public class EditingUserDataTests extends TestBase {
     EditingUserDataPage editingUserDataPage = new EditingUserDataPage();
 
     @Test
-    @Story("Редактирование личных данных")
-    @Description("Редактирование данных пользователя валидными значениями. Без пароля и логина.")
     @Tags({
             @Tag("Smoke"),
-            @Tag ("Regress")
+            @Tag("Regress")
     })
+    @Story("Редактирование личных данных")
+    @Description("Редактирование данных пользователя валидными значениями. Без пароля и логина.")
     @DisplayName("Валидные значения: имя и фамилия, номер телефона, " +
             "наименование организации, юридический адрес, ИНН, КПП")
     void userDataEditingTest() {

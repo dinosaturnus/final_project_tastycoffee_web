@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import tastycoffee.config.SelenoidConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -11,9 +12,12 @@ import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Selenide.sessionId;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static org.aeonbits.owner.ConfigFactory.create;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
+    private static SelenoidConfig selenoidConfig = create(SelenoidConfig.class, System.getProperties());
+
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
@@ -44,7 +48,8 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+        String remoteUrl = selenoidConfig.url();
+        String videoUrl = "https://" + remoteUrl + "/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {

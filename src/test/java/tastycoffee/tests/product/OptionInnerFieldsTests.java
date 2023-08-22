@@ -19,10 +19,10 @@ public class OptionInnerFieldsTests extends TestBase {
     OptionInnerFieldsPage optionInnerFieldsPage = new OptionInnerFieldsPage();
 
     @Test
+    @Tag("Regress")
     @Story("Выбор помола")
     @Description("Дефолтное значение помола 'В зернах'. При нажатии на тип помола открывается меню с вариантами выбора." +
             "После выбора варианта в блоке помола сохраняется выбранное значение, меню закрывается.")
-    @Tag("Regress")
     @DisplayName("Выбор помола через выпадающее меню")
     void openMillingDropdownMenuAndSelectedOptionTest() {
         step("Открыть страницу товара", () -> {

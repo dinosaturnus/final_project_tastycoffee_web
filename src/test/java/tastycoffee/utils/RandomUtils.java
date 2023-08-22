@@ -3,8 +3,6 @@ package tastycoffee.utils;
 import com.github.javafaker.Faker;
 
 public class RandomUtils {
-//    public static Faker faker = new Faker();
-
     public static String getRandomFullName() {
         return new Faker().name().fullName();
     }
@@ -31,6 +29,6 @@ public class RandomUtils {
     }
 
     public static String getRandomImage() {
-       return new Faker().options().option("bird.jpg", "cat.webp", "dog.png");
+        return new Faker().options().option("bird.jpg", "cat.webp", "dog.png");
     }
 }

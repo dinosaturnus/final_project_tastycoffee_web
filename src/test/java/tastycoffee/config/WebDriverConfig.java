@@ -12,7 +12,7 @@ public interface WebDriverConfig extends Config {
     String browser();
 
     @Key("version")
-    @DefaultValue("115.0.5790.170")
+    @DefaultValue("115")
     String browserVersion();
 
     @Key("browserSize")

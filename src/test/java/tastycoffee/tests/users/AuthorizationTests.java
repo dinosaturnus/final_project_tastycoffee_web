@@ -20,12 +20,12 @@ public class AuthorizationTests extends TestBase {
     AuthorizationPage authorizationPage = new AuthorizationPage();
 
     @Test
-    @Story("Пользователь аутентифицирован")
-    @Description("При вводе корректного логина и пароля система аутентифицирует пользователя")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
+    @Story("Пользователь аутентифицирован")
+    @Description("При вводе корректного логина и пароля система аутентифицирует пользователя")
     @DisplayName("Ввод корректного логина и пароля")
     void authorizationWithValidCredentialsTest() {
         step("Открыть страницу авторизации", () -> {
@@ -50,10 +50,10 @@ public class AuthorizationTests extends TestBase {
     }
 
     @Test
+    @Tag("Regress")
     @Story("Пользователю отказано в аутентификации")
     @Description("При вводе некорректного пароля пользователю отказано в аутентификации, " +
             "появляется сообщение об ошибке")
-    @Tag("Regress")
     @DisplayName("Ввод некорректного пароля и корректного логина")
     void invalidPasswordAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {
@@ -78,10 +78,10 @@ public class AuthorizationTests extends TestBase {
     }
 
     @Test
+    @Tag("Regress")
     @Story("Пользователю отказано в аутентификации")
     @Description("При вводе некорректного логина пользователю отказано в аутентификации, " +
             "появляется сообщение об ошибке")
-    @Tag("Regress")
     @DisplayName("Ввод некорректного логина и корректного пароля")
     void invalidEmailAuthorizationTest() {
         step("Открыть страницу авторизации", () -> {

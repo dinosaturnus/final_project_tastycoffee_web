@@ -38,9 +38,9 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Test
+    @Tag("Regress")
     @Story("Изменение счетчика товаров в шапке")
     @Description("После добавления товара в корзину счетчик товаров увеличивается на 1 единицу")
-    @Tag("Regress")
     @DisplayName("Увеличение значения")
     void cartCounterIncrementedAfterAddingProductTest() {
         step("Открыть страницу товара", () -> {
@@ -61,9 +61,9 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Test
+    @Tag("Regress")
     @Story("UI/UX кнопки 'Купить'")
     @Description("После добавления товара в корзину дефолтный текст кнопки 'Купить' меняется на 'В корзине'")
-    @Tag("Regress")
     @DisplayName("Изменение текста кнопки на 'В корзине'")
     void buyButtonTextChangesAfterAddingProductTheCartTest() {
         step("Открыть страницу товара", () -> {
@@ -84,12 +84,12 @@ public class AddProductToTheCartTests extends TestBase {
     }
 
     @Test
-    @Story("Добавление товара в корзину")
-    @Description("Товар появляется на странице корзины после нажатия кнопки 'Купить'")
     @Tags({
             @Tag("Smoke"),
             @Tag("Regress")
     })
+    @Story("Добавление товара в корзину")
+    @Description("Товар появляется на странице корзины после нажатия кнопки 'Купить'")
     @DisplayName("Нажатие кнопки 'Купить' добавляет товар в корзину")
     void checkingThatTheProductAppearsInTheCartAfterClickByButtonTest() {
         step("Открыть страницу корзины", () -> {

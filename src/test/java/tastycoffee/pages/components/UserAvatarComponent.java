@@ -8,10 +8,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class UserAvatarComponent {
     private SelenideElement editAvatarButton = $(".userAvatar-buttons"),
-    uploadImageButton = $("#upload-profile-file"),
-    saveImageButton = $("#upload-avatar-result"),
-    previewImage = $(".userAvatar-image"),
-    deleteAvatarButton = $(".deleteAvatar");
+            uploadImageButton = $("#upload-profile-file"),
+            saveImageButton = $("#upload-avatar-result"),
+            previewImage = $(".userAvatar-image"),
+            deleteAvatarButton = $(".deleteAvatar");
 
     public void uploadingAndSavingAvatar(String imagePath) {
         editAvatarButton.$(withText("Поменять фото профиля")).click();
