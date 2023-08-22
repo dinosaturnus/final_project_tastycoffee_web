@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="img/logo/TastyCoffeeLogo.jpg" alt="tasty-coffee" width="30%">
-</p>\
+</p>
 
 ## Содержание:
 
