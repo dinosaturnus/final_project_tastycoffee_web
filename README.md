@@ -119,8 +119,12 @@ password=пароль от вашего Selenoid
 >
 > `-DbrowserSize=` - размер окна браузера (_по умолчанию - <code>1980x1080</code>_).
 >
-> `-Dversion` - номер версии браузера (_по умолчанию - <code>100.0</code>_).
+> `-Dversion` - номер версии браузера (_по умолчанию - <code>115.0</code>_).
 
+Например:
+```bash
+./gradlew clean test -Dbrowser=FIREFOX -DbrowserSize=1240x960 -Dversion=116
+```
 
 <a id="jenkins"></a>
 ## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/final_project_tastycoffee_web/)
