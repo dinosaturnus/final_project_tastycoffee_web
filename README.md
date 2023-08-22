@@ -1,5 +1,9 @@
 # Дипломный проект по UI-автотестированию интернет-магазина [Tasty Coffee](https://shop.tastycoffee.ru/)
 
+<p align="center">
+  <img src="img/logo/TastyCoffeeLogo.jpg" alt="tasty-coffee" width="30%">
+</p>
+
 ## Содержание:
 
 * <a href="#annotation">Описание</a>
