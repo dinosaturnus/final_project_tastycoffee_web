@@ -16,7 +16,7 @@ import static tastycoffee.data.TestData.*;
 @Epic("Личный кабинет")
 @Feature("Личные данные")
 public class EditingUserAvatarTests extends TestBase {
-    static EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
+    EditingUserAvatarPage editingUserAvatarPage = new EditingUserAvatarPage();
 
     @DisplayName("Очистка куков после всех циклов теста для деавторизации пользователя - " +
             "необходимо при запуске всего скоупа тестов проекта, иначе последующие тесты падают")
@@ -30,7 +30,7 @@ public class EditingUserAvatarTests extends TestBase {
     @DisplayName("Предварительные шаги: авторизация под пользователем" +
             "и переход на страницу личного кабинета")
     @BeforeAll
-    static void authorizationUserPrecondition() {
+    void authorizationUserPrecondition() {
         step("Открыть страницу авторизации и авторизоваться", () -> {
             editingUserAvatarPage.authorizationUser(EMAIL, PASSWORD);
         });

@@ -17,7 +17,6 @@ import java.util.Map;
 import static org.aeonbits.owner.ConfigFactory.*;
 
 public class TestBase {
-
     private static WebDriverConfig webDriverConfig = create(WebDriverConfig.class, System.getProperties());
     private static SelenoidConfig selenoidConfig = create(SelenoidConfig.class, System.getProperties());
     protected static boolean isRemote = Boolean.getBoolean("isRemote");

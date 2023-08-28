@@ -32,11 +32,11 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.openAuthorizationPage();
         });
 
-        step("Ввеести логин", () -> {
+        step("Ввеести корректный логин", () -> {
             authorizationPage.setEmail(EMAIL);
         });
 
-        step("Ввести пароль", () -> {
+        step("Ввести корректный пароль", () -> {
             authorizationPage.setPassword(PASSWORD);
         });
 
@@ -60,7 +60,7 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.openAuthorizationPage();
         });
 
-        step("Ввести логин", () -> {
+        step("Ввести корректный логин", () -> {
             authorizationPage.setEmail(EMAIL);
         });
 
@@ -92,7 +92,7 @@ public class AuthorizationTests extends TestBase {
             authorizationPage.setEmail(EMAIL + "1");
         });
 
-        step("Ввести пароль", () -> {
+        step("Ввести корректный пароль", () -> {
             authorizationPage.setPassword(PASSWORD);
         });
 

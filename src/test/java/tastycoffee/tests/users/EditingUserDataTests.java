@@ -5,7 +5,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
-import tastycoffee.data.TestData;
 import tastycoffee.pages.users.EditingUserDataPage;
 import tastycoffee.tests.TestBase;
 
