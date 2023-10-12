@@ -11,7 +11,7 @@ import tastycoffee.pages.product.OptionInnerFieldsPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.TestData.*;
+import static tastycoffee.data.ProductInfoData.*;
 
 @Epic("Товар")
 @Feature("Тип помола")

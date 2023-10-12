@@ -9,7 +9,7 @@ import tastycoffee.pages.cart.EmptyingTheCartPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.TestData.*;
+import static tastycoffee.data.ProductInfoData.*;
 
 @Epic("Корзина")
 @Feature("Очищение корзины")

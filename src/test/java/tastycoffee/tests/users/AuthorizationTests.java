@@ -12,7 +12,8 @@ import tastycoffee.pages.users.AuthorizationPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.TestData.*;
+import static tastycoffee.data.AuthCredentialsData.EMAIL;
+import static tastycoffee.data.AuthCredentialsData.PASSWORD;
 
 @Epic("Личный кабинет")
 @Feature("Авторизация")

@@ -11,8 +11,10 @@ import tastycoffee.pages.users.EditingUserAvatarPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.TestData.*;
+import static tastycoffee.data.AuthCredentialsData.EMAIL;
+import static tastycoffee.data.AuthCredentialsData.PASSWORD;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @Epic("Личный кабинет")
 @Feature("Личные данные")
 public class EditingUserAvatarTests extends TestBase {

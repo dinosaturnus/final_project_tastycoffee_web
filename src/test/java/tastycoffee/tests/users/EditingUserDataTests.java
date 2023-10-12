@@ -9,7 +9,9 @@ import tastycoffee.pages.users.EditingUserDataPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.TestData.*;
+import static tastycoffee.data.AuthCredentialsData.EMAIL;
+import static tastycoffee.data.AuthCredentialsData.PASSWORD;
+import static tastycoffee.data.UserProfileData.*;
 
 @Epic("Личный кабинет")
 @Feature("Личные данные")
