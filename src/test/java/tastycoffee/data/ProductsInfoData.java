@@ -1,6 +1,6 @@
 package tastycoffee.data;
 
-public class ProductInfoData {
+public class ProductsInfoData {
     final public static String NUTTY_URL = "espresso-nutty",
             CANDY_URL = "black-candy",
             NUTTY_NAME = "Натти",

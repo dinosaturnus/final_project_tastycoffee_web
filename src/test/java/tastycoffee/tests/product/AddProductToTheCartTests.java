@@ -9,8 +9,8 @@ import tastycoffee.pages.product.AddProductToTheCartPage;
 import tastycoffee.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static tastycoffee.data.ProductInfoData.CANDY_NAME;
-import static tastycoffee.data.ProductInfoData.CANDY_URL;
+import static tastycoffee.data.ProductsInfoData.CANDY_NAME;
+import static tastycoffee.data.ProductsInfoData.CANDY_URL;
 
 @Epic("Товар")
 @Feature("Кнопка 'Купить'")
